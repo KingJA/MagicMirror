@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MagicMirrorView">
+        <attr name="mirrorSharp">
+            <flag name="circle" value="0" />
+            <flag name="roundRect" value="1" />
+        </attr>
+        <attr name="mirrorCorner" format="dimension"/>
+        <attr name="mirrorBorderWidth" format="dimension"/>
+        <attr name="mirrorBorderColor" format="reference|color"/>
+    </declare-styleable>
+</resources>
