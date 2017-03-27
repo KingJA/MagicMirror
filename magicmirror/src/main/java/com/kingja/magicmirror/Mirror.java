@@ -93,9 +93,9 @@ public abstract class Mirror {
         canvas.drawPath(getMirrorPath(), getStrokePaint());
     }
 
-    abstract int getMeasuredMirrorWidth();
+    public abstract int getMeasuredMirrorWidth();
 
-    abstract int getMeasuredMirrorHeight();
+    public abstract int getMeasuredMirrorHeight();
 
-    abstract Path getMirrorPath();
+    public abstract Path getMirrorPath();
 }

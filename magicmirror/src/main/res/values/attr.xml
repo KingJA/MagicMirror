@@ -5,6 +5,7 @@
         <attr name="mirrorSharp">
             <flag name="circle" value="0" />
             <flag name="roundRect" value="1" />
+            <flag name="oval" value="2" />
         </attr>
         <attr name="mirrorCorner" format="dimension"/>
         <attr name="mirrorBorderWidth" format="dimension"/>

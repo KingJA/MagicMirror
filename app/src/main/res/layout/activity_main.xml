@@ -3,30 +3,38 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#17f2b8"
     android:gravity="center">
-
-
-
+    <ImageView
+        android:layout_marginTop="8dp"
+        android:src="@mipmap/country"
+        android:layout_width="100dp"
+        android:layout_height="80dp"/>
     <com.kingja.magicmirror.MagicMirrorView
         app:mirrorCorner="20dp"
         app:mirrorBorderWidth="2dp"
-        app:mirrorBorderColor="#5c648e"
-        android:background="#b76868"
+        app:mirrorBorderColor="#3e1414"
         android:layout_marginTop="8dp"
         android:src="@mipmap/country"
-        android:layout_width="250dp"
-        android:layout_height="150dp"/>
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
 
     <com.kingja.magicmirror.MagicMirrorView
         app:mirrorSharp="roundRect"
         app:mirrorCorner="20dp"
-        app:mirrorBorderWidth="2dp"
-        app:mirrorBorderColor="#5c648e"
-        android:background="#b76868"
+        app:mirrorBorderWidth="1dp"
+        app:mirrorBorderColor="#3957f7"
         android:layout_marginTop="8dp"
         android:src="@mipmap/country"
-        android:layout_width="250dp"
-        android:layout_height="150dp"/>
+        android:layout_width="100dp"
+        android:layout_height="80dp"/>
+    <com.kingja.magicmirror.MagicMirrorView
+        app:mirrorSharp="oval"
+        app:mirrorCorner="20dp"
+        app:mirrorBorderWidth="1dp"
+        app:mirrorBorderColor="#333333"
+        android:layout_marginTop="8dp"
+        android:src="@mipmap/country"
+        android:layout_width="100dp"
+        android:layout_height="80dp"/>
 
 </LinearLayout>

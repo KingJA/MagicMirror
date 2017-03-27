@@ -1,6 +1,8 @@
-package com.kingja.magicmirror;
+package com.kingja.magicmirror.mirror;
 
 import android.graphics.Path;
+
+import com.kingja.magicmirror.Mirror;
 
 /**
  * Description：TODO
@@ -10,19 +12,19 @@ import android.graphics.Path;
  */
 public class RoundRectMirror extends Mirror {
     @Override
-    int getMeasuredMirrorWidth() {
-        width= magicMirrorView.getMeasuredWidth();
+    public int getMeasuredMirrorWidth() {
+        width = magicMirrorView.getMeasuredWidth();
         return width;
     }
 
     @Override
-    int getMeasuredMirrorHeight() {
-        this.height= magicMirrorView.getMeasuredHeight();
+    public int getMeasuredMirrorHeight() {
+        this.height = magicMirrorView.getMeasuredHeight();
         return height;
     }
 
     @Override
-    Path getMirrorPath() {
+    public Path getMirrorPath() {
         Path path = new Path();
         path.addRoundRect(getRectF(), corner, corner, Path.Direction.CW);
         return path;
