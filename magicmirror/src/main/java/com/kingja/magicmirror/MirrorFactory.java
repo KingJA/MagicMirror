@@ -1,6 +1,7 @@
 package com.kingja.magicmirror;
 
 import com.kingja.magicmirror.mirror.CircleMirror;
+import com.kingja.magicmirror.mirror.Mirror;
 import com.kingja.magicmirror.mirror.OvalMirror;
 import com.kingja.magicmirror.mirror.RoundRectMirror;
 

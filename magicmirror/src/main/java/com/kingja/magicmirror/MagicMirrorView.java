@@ -7,6 +7,8 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.widget.ImageView;
 
+import com.kingja.magicmirror.mirror.Mirror;
+
 /**
  * Description：TODO
  * Create Time：2017/3/1421:30

@@ -1,4 +1,4 @@
-package com.kingja.magicmirror;
+package com.kingja.magicmirror.mirror;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapShader;
@@ -9,6 +9,8 @@ import android.graphics.Path;
 import android.graphics.RectF;
 import android.graphics.Shader;
 import android.graphics.drawable.Drawable;
+
+import com.kingja.magicmirror.MagicMirrorView;
 
 /**
  * Description：TODO

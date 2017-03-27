@@ -2,8 +2,6 @@ package com.kingja.magicmirror.mirror;
 
 import android.graphics.Path;
 
-import com.kingja.magicmirror.Mirror;
-
 /**
  * Description：TODO
  * Create Time：2017/3/2221:30
