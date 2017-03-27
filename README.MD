@@ -7,6 +7,7 @@ A MagicMirror,support multiple shape ImageView. CLICK THE ***STAR***  if it's us
 | attribute | format | example  |
 | :------------- |:-------------| :-----|
 | mirrorSharp | int      | app:mirrorSharp="circle" |
+| mirrorSides | int      | app:mirrorSides="6" |
 | mirrorCorner | dimension      | app:mirrorCorner="8dp" |
 | mirrorBorderWidth | dimension      | app:mirrorBorderWidth="1dp" |
 | mirrorBorderColor | color/reference     | app:mirrorBorderColor="@color/red" |
