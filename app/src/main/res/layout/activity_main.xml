@@ -1,40 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
-    <ImageView
-        android:layout_marginTop="8dp"
-        android:src="@mipmap/country"
-        android:layout_width="100dp"
-        android:layout_height="80dp"/>
-    <com.kingja.magicmirror.MagicMirrorView
-        app:mirrorCorner="20dp"
-        app:mirrorBorderWidth="2dp"
-        app:mirrorBorderColor="#3e1414"
-        android:layout_marginTop="8dp"
-        android:src="@mipmap/country"
-        android:layout_width="100dp"
-        android:layout_height="100dp"/>
+    android:gravity="center"
+    android:orientation="vertical">
 
     <com.kingja.magicmirror.MagicMirrorView
-        app:mirrorSharp="roundRect"
-        app:mirrorCorner="20dp"
-        app:mirrorBorderWidth="1dp"
-        app:mirrorBorderColor="#3957f7"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginTop="8dp"
         android:src="@mipmap/country"
-        android:layout_width="100dp"
-        android:layout_height="80dp"/>
+        app:mirrorBorderColor="#77000000"
+        app:mirrorBorderWidth="2dp"
+        app:mirrorCorner="20dp" />
+
     <com.kingja.magicmirror.MagicMirrorView
-        app:mirrorSharp="oval"
-        app:mirrorCorner="20dp"
-        app:mirrorBorderWidth="1dp"
-        app:mirrorBorderColor="#333333"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
         android:layout_marginTop="8dp"
         android:src="@mipmap/country"
+        app:mirrorBorderColor="#42bcbc"
+        app:mirrorBorderWidth="1dp"
+        app:mirrorCorner="10dp"
+        app:mirrorSharp="roundRect" />
+
+    <com.kingja.magicmirror.MagicMirrorView
         android:layout_width="100dp"
-        android:layout_height="80dp"/>
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        android:src="@mipmap/country"
+        app:mirrorBorderColor="#333333"
+        app:mirrorBorderWidth="1dp"
+        app:mirrorCorner="20dp"
+        app:mirrorSharp="oval" />
 
 </LinearLayout>

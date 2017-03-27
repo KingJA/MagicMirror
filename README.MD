@@ -2,15 +2,14 @@
 A MagicMirror,support multiple shape ImageView. CLICK THE ***STAR***  if it's useful for you.
 
 ## Preview
-<!--![](https://github.com/KingJA/SwitchButton/blob/master/img/usage.gif)-->
+![](https://github.com/KingJA/MagicMirrorView/tree/master/readme/MagicMirror.png)
 ## Custom attribute
-<!--| attribute | format | example  |-->
-<!--| :------------- |:-------------| :-----|-->
-<!--| stroke_radius | dimension      | app:stroke_radius="5dp" |-->
-<!--| stroke_width | dimension      | app:stroke_width="2dp" |-->
-<!--| text_size | dimension      | app:text_size="16sp" |-->
-<!--| selectedColor | color/reference     | app:selected_color="@color/red" |-->
-<!--| selectedTab | integer     | app:selected="1" |-->
+| attribute | format | example  |
+| :------------- |:-------------| :-----|
+| mirrorSharp | int      | app:mirrorSharp="circle" |
+| mirrorCorner | dimension      | app:mirrorCorner="8dp" |
+| mirrorBorderWidth | dimension      | app:mirrorBorderWidth="1dp" |
+| mirrorBorderColor | color/reference     | app:mirrorBorderColor="@color/red" |
 
 <!--![](https://github.com/KingJA/SwitchButton/blob/master/img/mark.png)-->
 ## Gradle
@@ -19,21 +18,17 @@ A MagicMirror,support multiple shape ImageView. CLICK THE ***STAR***  if it's us
 ```
 
 ## Usage
-<!--
-### step 1
 ```java
-<lib.kingja.switchbutton.SwitchMultiButton
-        android:id="@+id/switchmultibutton"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        app:strokeRadius="5dp"
-        app:strokeWidth="1dp"
-        app:selectedTab="0"
-        app:selectedColor="#eb7b00"
-        app:textSize="14sp" />
+ <com.kingja.magicmirror.MagicMirrorView
+        app:mirrorSharp="roundRect"
+        app:mirrorCorner="10dp"
+        app:mirrorBorderWidth="1dp"
+        app:mirrorBorderColor="#3957f7"
+        android:layout_marginTop="8dp"
+        android:src="@mipmap/country"
+        android:layout_width="100dp"
+        android:layout_height="80dp"/>
 ```
--->
-
 
 ## Changelog
 
