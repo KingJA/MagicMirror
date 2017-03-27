@@ -24,6 +24,7 @@ public abstract class Mirror {
     protected int borderColor;
     protected int width;
     protected int height;
+    protected int sides;
     protected MagicMirrorView magicMirrorView;
 
 
@@ -44,6 +45,11 @@ public abstract class Mirror {
 
     public Mirror setBorderColor(int borderColor) {
         this.borderColor = borderColor;
+        return this;
+    }
+
+    public Mirror setSides(int sides) {
+        this.sides = sides;
         return this;
     }
 

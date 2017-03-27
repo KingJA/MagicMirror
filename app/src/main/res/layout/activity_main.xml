@@ -10,15 +10,33 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="8dp"
-        android:src="@mipmap/country" />
+        android:src="@mipmap/country"
+        app:mirrorSharp="rect" />
+
+    <com.kingja.magicmirror.MagicMirrorView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:src="@mipmap/country"
+        app:mirrorSharp="circle" />
+
+    <com.kingja.magicmirror.MagicMirrorView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:src="@mipmap/country"
+        app:mirrorBorderColor="#1e4524"
+        app:mirrorBorderWidth="1dp"
+        app:mirrorSharp="polygon"
+        app:mirrorSides="6" />
 
     <com.kingja.magicmirror.MagicMirrorView
         android:layout_width="100dp"
         android:layout_height="80dp"
         android:layout_marginTop="8dp"
         android:src="@mipmap/country"
-        app:mirrorBorderColor="#42bcbc"
-        app:mirrorBorderWidth="1dp"
+        app:mirrorBorderColor="#175d86"
+        app:mirrorBorderWidth="2dp"
         app:mirrorCorner="10dp"
         app:mirrorSharp="roundRect" />
 

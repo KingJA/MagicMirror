@@ -3,10 +3,13 @@
 
     <declare-styleable name="MagicMirrorView">
         <attr name="mirrorSharp">
-            <flag name="circle" value="0" />
-            <flag name="roundRect" value="1" />
-            <flag name="oval" value="2" />
+            <flag name="rect" value="0" />
+            <flag name="circle" value="1" />
+            <flag name="roundRect" value="2" />
+            <flag name="oval" value="3" />
+            <flag name="polygon" value="4" />
         </attr>
+        <attr name="mirrorSides" format="integer"/>
         <attr name="mirrorCorner" format="dimension"/>
         <attr name="mirrorBorderWidth" format="dimension"/>
         <attr name="mirrorBorderColor" format="reference|color"/>
