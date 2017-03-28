@@ -2,7 +2,7 @@
 A MagicMirror,support multiple shape ImageView. CLICK THE ***STAR***  if it's useful for you.
 
 ## Preview
-![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/MagicMirror.png)
+![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/preview.png)
 ## Custom attribute
 | attribute | format | example  |
 | :------------- |:-------------| :-----|
