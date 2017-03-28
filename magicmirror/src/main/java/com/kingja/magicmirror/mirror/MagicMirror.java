@@ -1,5 +1,6 @@
 package com.kingja.magicmirror.mirror;
 
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -28,22 +29,7 @@ public class MagicMirror extends Mirror {
 
     @Override
     public Path getMirrorPath() {
-        BitmapFactory.Options options = new BitmapFactory.Options();
-        options.inJustDecodeBounds = true;
-        /*缩放Bitmap，使它的尺寸不超过ImageView的尺寸*/
-        BitmapFactory.decodeResource(magicMirrorView.getResources(), resourceId, options);
-        int widthRatio = (int) (options.outWidth * 1f / width);
-        int heightRatio = (int) (options.outHeight * 1f / height);
-        if (widthRatio > heightRatio) {
-            options.inSampleSize = widthRatio;
-        } else {
-            options.inSampleSize = heightRatio;
-        }
-        if (options.inSampleSize == 0) {
-            options.inSampleSize = 1;
-        }
-        options.inJustDecodeBounds = false;
-        Bitmap bitmap = BitmapFactory.decodeResource(magicMirrorView.getResources(), resourceId, options);
+        Bitmap bitmap = getBitmapFromRes(magicMirrorView.getResources(),resourceId,width,height);
         int bitmapWidth = bitmap.getWidth();
         int bitmapHeight = bitmap.getHeight();
         /*获取像素路径*/
@@ -66,12 +52,23 @@ public class MagicMirror extends Mirror {
             }
         }
         bitmap.recycle();
+        float scaleX = width * 1.0f / bitmapWidth;
+        float scaleY = height * 1.0f /bitmapHeight;
         Matrix matrix = new Matrix();
-        float scaleX = width * 1.0f / bitmap.getWidth();
-        float scaleY = height * 1.0f / bitmap.getHeight();
         matrix.setScale(scaleX, scaleY);
         path.transform(matrix);
         return path;
+    }
+
+    private Bitmap getBitmapFromRes(Resources resources,int resId,int width,int height) {
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        BitmapFactory.decodeResource(resources, resId, options);
+        int widthRatio = (int) (options.outWidth * 1.0f / width);
+        int heightRatio = (int) (options.outHeight * 1.0f / height);
+        options.inSampleSize=Math.max(widthRatio,heightRatio);
+        options.inJustDecodeBounds = false;
+        return BitmapFactory.decodeResource(resources, resId, options);
     }
 
     @Override
