@@ -76,6 +76,7 @@ public abstract class Mirror {
 
     public Paint getShaderPaint() {
         Bitmap mBitmap = drawable2Bitmap(magicMirrorView.getDrawable());
+//        mBitmap= FilterHelper.getFilter(mBitmap);
         BitmapShader mBitmapShader = new BitmapShader(mBitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
 
 //        int bitmapSize = Math.min(mBitmap.getWidth(), mBitmap.getHeight());
