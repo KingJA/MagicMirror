@@ -16,7 +16,7 @@ A MagicMirror,support multiple shape ImageView. CLICK THE ***STAR***  if it's us
 <!--![](https://github.com/KingJA/SwitchButton/blob/master/img/mark.png)-->
 ## Gradle
 ```java
- 
+ compile 'com.kingja.magicmirror:magicmirror:1.1.1'
 ```
 
 ## Usage
