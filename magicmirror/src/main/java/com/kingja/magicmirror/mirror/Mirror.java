@@ -25,11 +25,17 @@ public abstract class Mirror {
     protected int width;
     protected int height;
     protected int sides;
+    protected int resourceId;
     protected MagicMirrorView magicMirrorView;
 
 
     public Mirror setContext(MagicMirrorView magicMirrorView) {
         this.magicMirrorView = magicMirrorView;
+        return this;
+    }
+
+    public Mirror setResourceId(int resourceId) {
+        this.resourceId = resourceId;
         return this;
     }
 
@@ -72,18 +78,24 @@ public abstract class Mirror {
         Bitmap mBitmap = drawable2Bitmap(magicMirrorView.getDrawable());
         BitmapShader mBitmapShader = new BitmapShader(mBitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
 
-        int bitmapSize = Math.min(mBitmap.getWidth(), mBitmap.getHeight());
-        float scale = width * 1.0f / bitmapSize;
-
+//        int bitmapSize = Math.min(mBitmap.getWidth(), mBitmap.getHeight());
+//        float scale = width * 1.0f / bitmapSize;
+        float scaleX = width * 1.0f / mBitmap.getWidth();
+        float scaleY = height * 1.0f / mBitmap.getHeight();
+        Paint mBitmapPaint = new Paint();
+        setPersonalPaint(mBitmapPaint);
+        mBitmapPaint.setAntiAlias(true);
         Matrix mMatrix = new Matrix();
-        mMatrix.setScale(scale, scale);
+        mMatrix.setScale(scaleX, scaleY);
         mBitmapShader.setLocalMatrix(mMatrix);
 
-        Paint mBitmapPaint = new Paint();
-        mBitmapPaint.setAntiAlias(true);
+
+
         mBitmapPaint.setShader(mBitmapShader);
         return mBitmapPaint;
     }
+
+    protected void setPersonalPaint(Paint bitmapPaint) {}
 
     private Bitmap drawable2Bitmap(Drawable drawable) {
         Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
@@ -96,9 +108,12 @@ public abstract class Mirror {
 
     }
 
+
     public void drawMirror(Canvas canvas) {
         canvas.drawPath(getMirrorPath(), getShaderPaint());
-        canvas.drawPath(getMirrorPath(), getStrokePaint());
+        if (borderWidth > 0) {
+            canvas.drawPath(getMirrorPath(), getStrokePaint());
+        }
     }
 
     public abstract int getMeasuredMirrorWidth();

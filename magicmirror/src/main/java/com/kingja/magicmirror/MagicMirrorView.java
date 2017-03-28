@@ -24,6 +24,7 @@ public class MagicMirrorView extends ImageView {
     private int borderColor;
     private int sides;
     private Mirror mirror;
+    private int resourceId;
 
     public MagicMirrorView(Context context) {
         this(context, null);
@@ -40,9 +41,11 @@ public class MagicMirrorView extends ImageView {
         corner = dp2px(typedArray.getDimension(R.styleable.MagicMirrorView_mirrorCorner, 0));
         borderWidth = dp2px(typedArray.getDimension(R.styleable.MagicMirrorView_mirrorBorderWidth, 0));
         borderColor = typedArray.getColor(R.styleable.MagicMirrorView_mirrorBorderColor, 0xffffff);
+        resourceId = typedArray.getResourceId(R.styleable.MagicMirrorView_mirrorAnySharp, 0);
         sides =typedArray.getInteger(R.styleable.MagicMirrorView_mirrorSides, 5);
         mirror = MirrorFactory.getMirror(sharpCode)
                 .setContext(this)
+                .setResourceId(resourceId)
                 .setCorner(corner)
                 .setBorderWidth(borderWidth)
                 .setBorderColor(borderColor)
@@ -62,7 +65,6 @@ public class MagicMirrorView extends ImageView {
     }
 
     protected int dp2px(float dp) {
-
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, getResources().getDisplayMetrics());
     }
 }
