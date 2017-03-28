@@ -3,3 +3,6 @@
 * 研究https://github.com/siyamed/android-shape-imageview
 * 研究吧svg画布转成自定义形状的ImageView
 * http://blog.csdn.net/u013015161/article/details/50993199
+* 缩放模式
+* svg失真
+* 遮罩图片的像素要大于scr图片像素
