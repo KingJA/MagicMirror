@@ -3,8 +3,8 @@ package com.kingja.magicmirror.mirror;
 import android.graphics.Path;
 
 /**
- * Description：TODO
- * Create Time：2017/3/2221:31
+ * Description:TODO
+ * Create Time:2017/3/2221:31
  * Author:KingJA
  * Email:kingjavip@gmail.com
  */

@@ -13,8 +13,8 @@ import android.graphics.drawable.Drawable;
 import com.kingja.magicmirror.MagicMirrorView;
 
 /**
- * Description：TODO
- * Create Time：2017/3/2221:01
+ * Description:TODO
+ * Create Time:2017/3/2221:01
  * Author:KingJA
  * Email:kingjavip@gmail.com
  */

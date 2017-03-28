@@ -12,8 +12,8 @@ import android.widget.ImageView;
 import com.kingja.magicmirror.mirror.Mirror;
 
 /**
- * Description：TODO
- * Create Time：2017/3/1421:30
+ * Description:TODO
+ * Create Time:2017/3/1421:30
  * Author:KingJA
  * Email:kingjavip@gmail.com
  */

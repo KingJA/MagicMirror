@@ -9,8 +9,8 @@ import com.kingja.magicmirror.mirror.RectMirror;
 import com.kingja.magicmirror.mirror.RoundRectMirror;
 
 /**
- * Description：TODO
- * Create Time：2017/3/2221:23
+ * Description:TODO
+ * Create Time:2017/3/2221:23
  * Author:KingJA
  * Email:kingjavip@gmail.com
  */
