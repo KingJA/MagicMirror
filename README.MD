@@ -11,6 +11,7 @@ A MagicMirror,support multiple shape ImageView. CLICK THE ***STAR***  if it's us
 | mirrorCorner | dimension      | app:mirrorCorner="8dp" |
 | mirrorBorderWidth | dimension      | app:mirrorBorderWidth="1dp" |
 | mirrorBorderColor | color/reference     | app:mirrorBorderColor="@color/red" |
+| mirrorAnySharp | reference     | app:mirrorAnySharp="@drawable/beauty" |
 
 <!--![](https://github.com/KingJA/SwitchButton/blob/master/img/mark.png)-->
 ## Gradle
