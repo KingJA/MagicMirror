@@ -16,13 +16,15 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@mipmap/country"
-            app:mirrorSharp="rect" />
+            app:mirrorSharp="rect"
+            app:mirrorFilter="gray" />
 
         <com.kingja.magicmirror.MagicMirrorView
             android:layout_marginRight="12dp"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@mipmap/country"
+            app:mirrorFilter="oldPicture"
             app:mirrorSharp="circle" />
 
         <com.kingja.magicmirror.MagicMirrorView
@@ -30,6 +32,7 @@
             android:layout_height="100dp"
             android:src="@mipmap/country"
             app:mirrorSharp="polygon"
+            app:mirrorFilter="saturation"
             app:mirrorSides="6" />
     </LinearLayout>
 

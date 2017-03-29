@@ -11,6 +11,7 @@ import android.graphics.Shader;
 import android.graphics.drawable.Drawable;
 
 import com.kingja.magicmirror.MagicMirrorView;
+import com.kingja.magicmirror.filter.FilterHelper;
 
 /**
  * Description:TODO
@@ -25,6 +26,7 @@ public abstract class Mirror {
     protected int width;
     protected int height;
     protected int sides;
+    protected int filter;
     protected int resourceId;
     protected MagicMirrorView magicMirrorView;
 
@@ -36,6 +38,10 @@ public abstract class Mirror {
 
     public Mirror setResourceId(int resourceId) {
         this.resourceId = resourceId;
+        return this;
+    }
+    public Mirror setFilter(int filter) {
+        this.filter = filter;
         return this;
     }
 
@@ -76,7 +82,7 @@ public abstract class Mirror {
 
     public Paint getShaderPaint() {
         Bitmap mBitmap = drawable2Bitmap(magicMirrorView.getDrawable());
-//        mBitmap= FilterHelper.getFilter(mBitmap);
+        mBitmap= FilterHelper.getFilterBitmap(mBitmap,filter);
         BitmapShader mBitmapShader = new BitmapShader(mBitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
 
 //        int bitmapSize = Math.min(mBitmap.getWidth(), mBitmap.getHeight());

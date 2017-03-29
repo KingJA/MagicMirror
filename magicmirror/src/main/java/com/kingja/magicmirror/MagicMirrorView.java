@@ -3,8 +3,6 @@ package com.kingja.magicmirror;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.VectorDrawable;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.widget.ImageView;
@@ -23,6 +21,7 @@ public class MagicMirrorView extends ImageView {
     private int borderWidth;
     private int borderColor;
     private int sides;
+    private int filter;
     private Mirror mirror;
     private int resourceId;
 
@@ -42,10 +41,12 @@ public class MagicMirrorView extends ImageView {
         borderWidth = dp2px(typedArray.getDimension(R.styleable.MagicMirrorView_mirrorBorderWidth, 0));
         borderColor = typedArray.getColor(R.styleable.MagicMirrorView_mirrorBorderColor, 0xffffff);
         resourceId = typedArray.getResourceId(R.styleable.MagicMirrorView_mirrorAnySharp, 0);
+        filter = typedArray.getInteger(R.styleable.MagicMirrorView_mirrorFilter, 0);
         sides =typedArray.getInteger(R.styleable.MagicMirrorView_mirrorSides, 5);
         mirror = MirrorFactory.getMirror(sharpCode)
                 .setContext(this)
                 .setResourceId(resourceId)
+                .setFilter(filter)
                 .setCorner(corner)
                 .setBorderWidth(borderWidth)
                 .setBorderColor(borderColor)
