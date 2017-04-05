@@ -9,12 +9,14 @@ import android.graphics.Path;
 import android.graphics.RectF;
 import android.graphics.Shader;
 import android.graphics.drawable.Drawable;
+import android.support.annotation.IdRes;
+import android.support.annotation.NonNull;
 
 import com.kingja.magicmirror.MagicMirrorView;
 import com.kingja.magicmirror.filter.FilterHelper;
 
 /**
- * Description:TODO
+ * Description:Mirror
  * Create Time:2017/3/22 21:01
  * Author:KingJA
  * Email:kingjavip@gmail.com
@@ -31,12 +33,12 @@ public abstract class Mirror {
     protected MagicMirrorView magicMirrorView;
 
 
-    public Mirror setContext(MagicMirrorView magicMirrorView) {
+    public Mirror setContext(@NonNull MagicMirrorView magicMirrorView) {
         this.magicMirrorView = magicMirrorView;
         return this;
     }
 
-    public Mirror setResourceId(int resourceId) {
+    public Mirror setResourceId(@IdRes int resourceId) {
         this.resourceId = resourceId;
         return this;
     }
@@ -74,17 +76,12 @@ public abstract class Mirror {
         return strokePaint;
     }
 
+
     public RectF getRectF() {
         int borderOffset = (int) (borderWidth * 0.5f);
         RectF rectF = new RectF();
         rectF.set(borderOffset, borderOffset, width - borderOffset, height - borderOffset);
         return rectF;
-    }
-
-    public Path getDefaultPath() {
-        Path path = new Path();
-        path.addRect(getRectF(), Path.Direction.CW);
-        return path;
     }
 
     public Paint getShaderPaint() {
@@ -112,9 +109,7 @@ public abstract class Mirror {
             drawable.draw(canvas);
         }
         return bitmap;
-
     }
-
 
     public void drawMirror(Canvas canvas) {
         canvas.drawPath(getMirrorPath(), getShaderPaint());
@@ -131,4 +126,6 @@ public abstract class Mirror {
     public abstract int getMeasuredMirrorHeight();
 
     public abstract Path getMirrorPath();
+
+
 }

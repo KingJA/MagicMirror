@@ -29,16 +29,16 @@ public class MagicMirrorView extends ImageView {
 
     public MagicMirrorView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.MagicMirrorView);
-        mirror = MirrorFactory.createMirror(typedArray.getInteger(R.styleable.MagicMirrorView_mirrorSharp, 0))
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.MagicMirrorView);
+        mirror = MirrorFactory.createMirror(a.getInteger(R.styleable.MagicMirrorView_mirrorSharp, 0))
                 .setContext(this)
-                .setResourceId(typedArray.getResourceId(R.styleable.MagicMirrorView_mirrorAnySharp, 0))
-                .setFilter(typedArray.getInteger(R.styleable.MagicMirrorView_mirrorFilter, 0))
-                .setCorner(dp2px(typedArray.getDimension(R.styleable.MagicMirrorView_mirrorCorner, 0)))
-                .setBorderWidth(dp2px(typedArray.getDimension(R.styleable.MagicMirrorView_mirrorBorderWidth, 0)))
-                .setBorderColor(typedArray.getColor(R.styleable.MagicMirrorView_mirrorBorderColor, 0xffffff))
-                .setSides(typedArray.getInteger(R.styleable.MagicMirrorView_mirrorSides, 5));
-        typedArray.recycle();
+                .setResourceId(a.getResourceId(R.styleable.MagicMirrorView_mirrorAnySharp, 0))
+                .setFilter(a.getInteger(R.styleable.MagicMirrorView_mirrorFilter, 0))
+                .setCorner(dp2px(a.getDimension(R.styleable.MagicMirrorView_mirrorCorner, 0)))
+                .setBorderWidth(dp2px(a.getDimension(R.styleable.MagicMirrorView_mirrorBorderWidth, 0)))
+                .setBorderColor(a.getColor(R.styleable.MagicMirrorView_mirrorBorderColor, 0xffffff))
+                .setSides(a.getInteger(R.styleable.MagicMirrorView_mirrorSides, 5));
+        a.recycle();
     }
 
     @Override
@@ -55,4 +55,5 @@ public class MagicMirrorView extends ImageView {
     protected int dp2px(float dp) {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, getResources().getDisplayMetrics());
     }
+
 }

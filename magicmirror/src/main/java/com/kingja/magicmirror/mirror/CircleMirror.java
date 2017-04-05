@@ -3,7 +3,7 @@ package com.kingja.magicmirror.mirror;
 import android.graphics.Path;
 
 /**
- * Description:TODO
+ * Description:Circle
  * Create Time:2017/3/22 21:30
  * Author:KingJA
  * Email:kingjavip@gmail.com
@@ -27,6 +27,4 @@ public class CircleMirror extends Mirror {
         path.addCircle(getRectF().centerX(), getRectF().centerY(), width * 0.5f - borderWidth * 0.5f, Path.Direction.CW);
         return path;
     }
-
-
 }

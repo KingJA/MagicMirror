@@ -13,27 +13,23 @@ import android.graphics.Paint;
  * Email:kingjavip@gmail.com
  */
 public class FilterHelper {
-    /*默认*/
-    private static final float[] ZERO = {
+    private static final float[] CLEAR = {
             1F, 0F, 0F, 0F, 0F,
             0F, 1F, 0F, 0F, 0F,
             0F, 0F, 1F, 0F, 0F,
             0F, 0F, 0F, 1F, 0F};
-    /*老照片*/
     private static final float[] OLDPICTURE = {
             0.393F, 0.769F, 0.189F, 0, 0,
             0.349F, 0.686F, 0.168F, 0, 0,
             0.272F, 0.534F, 0.131F, 0, 0,
             0, 0, 0, 1, 0};
 
-    /*灰色*/
     private static final float[] GRAY = {
             0.33F, 0.59F, 0.11F, 0F, 0F,
             0.33F, 0.59F, 0.11F, 0F, 0F,
             0.33F, 0.59F, 0.11F, 0F, 0F,
             0F, 0F, 0F, 1F, 0F};
 
-    /*高饱和*/
     private static final float[] SATURATION = {
             1.438F, -0.122F, -0.016F, 0F, -0.03F,
             -0.062F, 1.378F, -0.016F, 0F, 0.05F,
@@ -53,7 +49,7 @@ public class FilterHelper {
     }
 
     private static float[] getFilter(int filter) {
-        float[] filterArr = ZERO;
+        float[] filterArr = CLEAR;
         switch (filter) {
             case 1:
                 filterArr = OLDPICTURE;
