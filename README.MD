@@ -21,13 +21,13 @@ A MagicMirror,support multiple shape ImageView. CLICK THE ***STAR***  if it's us
 ## Custom attribute
 | attribute | format | belong  |ps  |
 | :------------- |:-------------| :-----|:-----|
-| mirrorSharp | enum      | ALL |`rect``circle``roundRect``oval``polygon`|
+| mirrorSharp | enum      | ALL |rect circle roundRect oval polygon any|
 | mirrorSides | int      | polygon|>2|
 | mirrorCorner | dimension      | roundRect ||
 | mirrorBorderWidth | dimension      | !any ||
 | mirrorBorderColor | color/reference     | !any ||
-| mirrorAnySharp | reference     | polygon |put in drawable|
-| mirrorFilter | enum     | ALL |`oldPicture` `gray` `saturation`|
+| mirrorAnySharp | reference     | polygon |res must be put in drawable folder|
+| mirrorFilter | enum     | ALL |oldPicture gray saturation|
 
 <!--![](https://github.com/KingJA/SwitchButton/blob/master/img/mark.png)-->
 ## Gradle
