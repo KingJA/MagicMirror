@@ -33,25 +33,41 @@ A MagicMirror,support multiple shape ImageView. CLICK THE ***STAR***  if it's us
 | mirrorAnySharp | reference     | polygon |res must be put in drawable folder|
 | mirrorFilter | enum     | ALL |oldPicture gray saturation|
 
-<!--![](https://github.com/KingJA/SwitchButton/blob/master/img/mark.png)-->
+
 ## Gradle
 ```java
  compile 'com.kingja.magicmirror:magicmirror:1.1.1'
 ```
 
 ## Usage
+Basic Sharp
 ```java
- <com.kingja.magicmirror.MagicMirrorView
-        app:mirrorSharp="roundRect"
-        app:mirrorCorner="10dp"
-        app:mirrorBorderWidth="1dp"
-        app:mirrorBorderColor="#3957f7"
-        android:layout_marginTop="8dp"
-        android:src="@mipmap/country"
-        android:layout_width="100dp"
-        android:layout_height="80dp"/>
+<com.kingja.magicmirror.MagicMirrorView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/jared_leto"
+            app:mirrorSharp="roundRect"
+            app:mirrorBorderWidth="2dp"
+            app:mirrorBorderColor="#bfbfbf"
+            app:mirrorCorner="10dp"/>
 ```
-
+Mask Sharp
+```java
+<com.kingja.magicmirror.MagicMirrorView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/megan"
+            app:mirrorAnySharp="@drawable/lemon"
+            app:mirrorSharp="any"/>
+```
+Filter
+```java
+<com.kingja.magicmirror.MagicMirrorView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/taylor"
+            app:mirrorFilter="oldPicture"/>
+```
 ## Changelog
 
 **v1.1.1**

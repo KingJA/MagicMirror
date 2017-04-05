@@ -40,6 +40,7 @@
 ```
 
 ## 使用
+![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/rect.png)
 ```java
  <com.kingja.magicmirror.MagicMirrorView
         app:mirrorSharp="roundRect"
