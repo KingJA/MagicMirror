@@ -40,7 +40,7 @@ A MagicMirror,support multiple shape ImageView. CLICK THE ***STAR***  if it's us
 ```
 
 ## Usage
-Basic Sharp
+* Basic Sharp
 ```java
 <com.kingja.magicmirror.MagicMirrorView
             android:layout_width="100dp"
@@ -51,7 +51,7 @@ Basic Sharp
             app:mirrorBorderColor="#bfbfbf"
             app:mirrorCorner="10dp"/>
 ```
-Mask Sharp
+* Mask Sharp (the res of mirrorAnySharp must be put in res/drawable)
 ```java
 <com.kingja.magicmirror.MagicMirrorView
             android:layout_width="100dp"
@@ -60,7 +60,7 @@ Mask Sharp
             app:mirrorAnySharp="@drawable/lemon"
             app:mirrorSharp="any"/>
 ```
-Filter
+* Filter
 ```java
 <com.kingja.magicmirror.MagicMirrorView
             android:layout_width="100dp"
