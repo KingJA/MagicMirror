@@ -1,5 +1,7 @@
 # MagicMirror
+
 [English Document](README.md)
+
 自定义图形控件，支持多种形状，边框，滤镜。如果对您有帮助，请点击Star.
 
 ## Preview
