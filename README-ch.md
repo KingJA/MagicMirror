@@ -3,22 +3,22 @@
 自定义图形控件，支持多种形状，边框，滤镜。如果对您有帮助，请点击Star.
 
 ## Preview
-![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/preview.png)
 
 | **基本形状**|||||
 |:---:|:----:|:----:|:----:|:----:|
-|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png) |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|
+|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/rect.png) |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/circle.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/round_rect.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/oval.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/polygon.png)|
 |rect|circle|roundRect|oval|polygon|
 
-| **任何形状**|||||
+| **蒙版形状**|||||
 |:---:|:----:|:----:|:----:|:----:|
-|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png) |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|
-|drawable|svg||||
+|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/bg_heart.png) |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/bg_apple.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/bg_tag.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/bg_lemon.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/bg_beauty.png)|
+|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/heart.png) |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/apple.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/tag.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/lemon.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/beauty.png)|
+|heart|apple|tag|lemon|beauty|
 
-| **Filter**|||||
+| **滤镜**|||||
 |:---:|:----:|:----:|:----:|:----:|
-|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png) |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|
-|oldPicture|gray|saturation|||
+|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/original.png) |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/gray.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/old_picture.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/saturation.png)||
+|original |gray|oldPicture|saturation||
 
 ## 自定义属性
 | 参数 | 格式 | 所属  |备注  |
