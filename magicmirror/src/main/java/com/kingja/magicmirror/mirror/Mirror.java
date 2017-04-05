@@ -15,7 +15,7 @@ import com.kingja.magicmirror.filter.FilterHelper;
 
 /**
  * Description:TODO
- * Create Time:2017/3/2221:01
+ * Create Time:2017/3/22 21:01
  * Author:KingJA
  * Email:kingjavip@gmail.com
  */
@@ -40,6 +40,7 @@ public abstract class Mirror {
         this.resourceId = resourceId;
         return this;
     }
+
     public Mirror setFilter(int filter) {
         this.filter = filter;
         return this;
@@ -80,13 +81,16 @@ public abstract class Mirror {
         return rectF;
     }
 
+    public Path getDefaultPath() {
+        Path path = new Path();
+        path.addRect(getRectF(), Path.Direction.CW);
+        return path;
+    }
+
     public Paint getShaderPaint() {
         Bitmap mBitmap = drawable2Bitmap(magicMirrorView.getDrawable());
-        mBitmap= FilterHelper.getFilterBitmap(mBitmap,filter);
+        mBitmap = FilterHelper.getFilterBitmap(mBitmap, filter);
         BitmapShader mBitmapShader = new BitmapShader(mBitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
-
-//        int bitmapSize = Math.min(mBitmap.getWidth(), mBitmap.getHeight());
-//        float scale = width * 1.0f / bitmapSize;
         float scaleX = width * 1.0f / mBitmap.getWidth();
         float scaleY = height * 1.0f / mBitmap.getHeight();
         Paint mBitmapPaint = new Paint();
@@ -95,14 +99,10 @@ public abstract class Mirror {
         Matrix mMatrix = new Matrix();
         mMatrix.setScale(scaleX, scaleY);
         mBitmapShader.setLocalMatrix(mMatrix);
-
-
-
         mBitmapPaint.setShader(mBitmapShader);
         return mBitmapPaint;
     }
 
-    protected void setPersonalPaint(Paint bitmapPaint) {}
 
     private Bitmap drawable2Bitmap(Drawable drawable) {
         Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
@@ -121,6 +121,9 @@ public abstract class Mirror {
         if (borderWidth > 0) {
             canvas.drawPath(getMirrorPath(), getStrokePaint());
         }
+    }
+
+    protected void setPersonalPaint(Paint bitmapPaint) {
     }
 
     public abstract int getMeasuredMirrorWidth();

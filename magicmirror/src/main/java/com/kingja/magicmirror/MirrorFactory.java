@@ -1,6 +1,6 @@
 package com.kingja.magicmirror;
 
-import com.kingja.magicmirror.mirror.MagicMirror;
+import com.kingja.magicmirror.mirror.AnyMirror;
 import com.kingja.magicmirror.mirror.CircleMirror;
 import com.kingja.magicmirror.mirror.Mirror;
 import com.kingja.magicmirror.mirror.OvalMirror;
@@ -10,19 +10,19 @@ import com.kingja.magicmirror.mirror.RoundRectMirror;
 
 /**
  * Description:TODO
- * Create Time:2017/3/2221:23
+ * Create Time:2017/3/22 21:23
  * Author:KingJA
  * Email:kingjavip@gmail.com
  */
 public class MirrorFactory {
-    public static final int RECT = 0;
-    public static final int CIRCLE = 1;
-    public static final int ROUND_RECT = 2;
-    public static final int OVAL = 3;
-    public static final int POLYGON = 4;
-    public static final int ANY = 5;
+    private static final int RECT = 0;
+    private static final int CIRCLE = 1;
+    private static final int ROUND_RECT = 2;
+    private static final int OVAL = 3;
+    private static final int POLYGON = 4;
+    private static final int ANY = 5;
 
-    public static Mirror getMirror(int sharp) {
+    public static Mirror createMirror(int sharp) {
         Mirror mirror;
         switch (sharp) {
             case CIRCLE:
@@ -41,7 +41,7 @@ public class MirrorFactory {
                 mirror = new PolygonMirror();
                 break;
             case ANY:
-                mirror = new MagicMirror();
+                mirror = new AnyMirror();
                 break;
             default:
                 mirror = new RectMirror();

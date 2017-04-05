@@ -11,11 +11,11 @@ import android.support.annotation.NonNull;
 
 /**
  * Description:TODO
- * Create Time:2017/3/2221:31
+ * Create Time:2017/3/22 21:31
  * Author:KingJA
  * Email:kingjavip@gmail.com
  */
-public class MagicMirror extends Mirror {
+public class AnyMirror extends Mirror {
     @Override
     public int getMeasuredMirrorWidth() {
         width = magicMirrorView.getMeasuredWidth();

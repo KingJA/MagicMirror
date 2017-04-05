@@ -4,8 +4,8 @@ import android.graphics.Matrix;
 import android.graphics.Path;
 
 /**
- * Description:TODO
- * Create Time:2017/3/2221:30
+ * Description:Polygo
+ * Create Time:2017/3/22 21:30
  * Author:KingJA
  * Email:kingjavip@gmail.com
  */
@@ -24,10 +24,13 @@ public class PolygonMirror extends Mirror {
 
     @Override
     public Path getMirrorPath() {
+        if (sides < 3) {
+            throw new IllegalArgumentException("sides can't be smaller than 3");
+        }
         Path path = new Path();
         float radius, centerX, centerY;
-        radius = centerX = centerY = Math.min(width, height)*0.5f;
-        radius -= borderWidth*0.5f;
+        radius = centerX = centerY = Math.min(width, height) * 0.5f;
+        radius -= borderWidth * 0.5f;
         float offsetAngle = 0;
         offsetAngle = (float) (Math.PI * offsetAngle / 180);
         for (int i = 0; i < sides; i++) {

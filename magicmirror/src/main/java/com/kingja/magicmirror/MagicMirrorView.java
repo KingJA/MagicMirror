@@ -11,19 +11,13 @@ import com.kingja.magicmirror.mirror.Mirror;
 
 /**
  * Description:TODO
- * Create Time:2017/3/1421:30
+ * Create Time:2017/3/14 21:30
  * Author:KingJA
  * Email:kingjavip@gmail.com
  */
 public class MagicMirrorView extends ImageView {
 
-    private int corner;
-    private int borderWidth;
-    private int borderColor;
-    private int sides;
-    private int filter;
     private Mirror mirror;
-    private int resourceId;
 
     public MagicMirrorView(Context context) {
         this(context, null);
@@ -36,21 +30,14 @@ public class MagicMirrorView extends ImageView {
     public MagicMirrorView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.MagicMirrorView);
-        int sharpCode = typedArray.getInteger(R.styleable.MagicMirrorView_mirrorSharp, 0);
-        corner = dp2px(typedArray.getDimension(R.styleable.MagicMirrorView_mirrorCorner, 0));
-        borderWidth = dp2px(typedArray.getDimension(R.styleable.MagicMirrorView_mirrorBorderWidth, 0));
-        borderColor = typedArray.getColor(R.styleable.MagicMirrorView_mirrorBorderColor, 0xffffff);
-        resourceId = typedArray.getResourceId(R.styleable.MagicMirrorView_mirrorAnySharp, 0);
-        filter = typedArray.getInteger(R.styleable.MagicMirrorView_mirrorFilter, 0);
-        sides =typedArray.getInteger(R.styleable.MagicMirrorView_mirrorSides, 5);
-        mirror = MirrorFactory.getMirror(sharpCode)
+        mirror = MirrorFactory.createMirror(typedArray.getInteger(R.styleable.MagicMirrorView_mirrorSharp, 0))
                 .setContext(this)
-                .setResourceId(resourceId)
-                .setFilter(filter)
-                .setCorner(corner)
-                .setBorderWidth(borderWidth)
-                .setBorderColor(borderColor)
-                .setSides(sides);
+                .setResourceId(typedArray.getResourceId(R.styleable.MagicMirrorView_mirrorAnySharp, 0))
+                .setFilter(typedArray.getInteger(R.styleable.MagicMirrorView_mirrorFilter, 0))
+                .setCorner(dp2px(typedArray.getDimension(R.styleable.MagicMirrorView_mirrorCorner, 0)))
+                .setBorderWidth(dp2px(typedArray.getDimension(R.styleable.MagicMirrorView_mirrorBorderWidth, 0)))
+                .setBorderColor(typedArray.getColor(R.styleable.MagicMirrorView_mirrorBorderColor, 0xffffff))
+                .setSides(typedArray.getInteger(R.styleable.MagicMirrorView_mirrorSides, 5));
         typedArray.recycle();
     }
 
