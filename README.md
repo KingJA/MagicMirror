@@ -1,5 +1,7 @@
-# MagicMirror
+# MagicMirror 
+
 [中文文档*](README-ch.md)
+
 A MagicMirror,support multiple shape ImageView. CLICK THE ***STAR***  if it's useful for you.
 
 ## Preview
