@@ -16,6 +16,7 @@ import android.support.annotation.NonNull;
  * Email:kingjavip@gmail.com
  */
 public class AnyMirror extends Mirror {
+
     @Override
     public int getMeasuredMirrorWidth() {
         width = magicMirrorView.getMeasuredWidth();
@@ -82,6 +83,7 @@ public class AnyMirror extends Mirror {
         options.inJustDecodeBounds = false;
         return BitmapFactory.decodeResource(resources, resId, options);
     }
+
 
 
 }

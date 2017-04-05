@@ -68,7 +68,7 @@ public abstract class Mirror {
         return this;
     }
 
-    public Paint getStrokePaint() {
+    public final Paint getStrokePaint() {
         Paint strokePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         strokePaint.setStyle(Paint.Style.STROKE);
         strokePaint.setColor(borderColor);
@@ -77,14 +77,14 @@ public abstract class Mirror {
     }
 
 
-    public RectF getRectF() {
+    public final RectF getRectF() {
         int borderOffset = (int) (borderWidth * 0.5f);
         RectF rectF = new RectF();
         rectF.set(borderOffset, borderOffset, width - borderOffset, height - borderOffset);
         return rectF;
     }
 
-    public Paint getShaderPaint() {
+    public final Paint getShaderPaint() {
         Bitmap mBitmap = drawable2Bitmap(magicMirrorView.getDrawable());
         mBitmap = FilterHelper.getFilterBitmap(mBitmap, filter);
         BitmapShader mBitmapShader = new BitmapShader(mBitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
@@ -111,7 +111,7 @@ public abstract class Mirror {
         return bitmap;
     }
 
-    public void drawMirror(Canvas canvas) {
+    public final void drawMirror(Canvas canvas) {
         canvas.drawPath(getMirrorPath(), getShaderPaint());
         if (borderWidth > 0) {
             canvas.drawPath(getMirrorPath(), getStrokePaint());
