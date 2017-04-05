@@ -5,11 +5,10 @@
 A MagicMirror,support multiple shape ImageView. CLICK THE ***STAR***  if it's useful for you.
 
 ## Preview
-![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/preview.png)
 
 | **Basic Sharp**|||||
 |:---:|:----:|:----:|:----:|:----:|
-|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/rect.png) |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/circle.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/roundRect.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/oval.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/polygon.png)|
+|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/rect.png) |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/circle.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/round_rect.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/oval.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/polygon.png)|
 |rect|circle|roundRect|oval|polygon|
 
 | **Any Sharp**|||||
