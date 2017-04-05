@@ -13,29 +13,28 @@
         android:weightSum="1">
 
         <com.kingja.magicmirror.MagicMirrorView
-            app:mirrorSharp="rect"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginRight="12dp"
-            android:src="@mipmap/jared_leto"
-            android:layout_weight="0.02" />
+            android:src="@mipmap/megan"
+            app:mirrorAnySharp="@drawable/heart"
+            app:mirrorSharp="any"
+           />
 
         <com.kingja.magicmirror.MagicMirrorView
-            android:scaleType="centerCrop"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginRight="12dp"
-            android:src="@mipmap/jared_leto"
-            app:mirrorSharp="circle"/>
+            android:src="@mipmap/megan"
+            app:mirrorAnySharp="@drawable/apple"
+            app:mirrorSharp="any"
+            />
 
         <com.kingja.magicmirror.MagicMirrorView
-            android:id="@+id/polygonMirror"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@mipmap/jared_leto"
-            app:mirrorFilter="saturation"
-            app:mirrorSharp="polygon"
-            app:mirrorSides="5"/>
+            android:src="@mipmap/megan"
+            app:mirrorAnySharp="@drawable/tag"
+            app:mirrorSharp="any"
+             />
     </LinearLayout>
 
 
@@ -49,24 +48,58 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginRight="12dp"
-            android:src="@mipmap/jared_leto"
+            android:src="@mipmap/meimei"
             app:mirrorCorner="10dp"
             app:mirrorSharp="roundRect"/>
 
         <com.kingja.magicmirror.MagicMirrorView
             android:layout_width="100dp"
-            android:layout_height="80dp"
-            android:layout_marginRight="12dp"
-            android:src="@mipmap/jared_leto"
-            app:mirrorSharp="oval"/>
+            android:layout_height="100dp"
+            android:src="@mipmap/megan"
+            app:mirrorAnySharp="@drawable/lemon"
+            app:mirrorSharp="any"
+           />
 
         <com.kingja.magicmirror.MagicMirrorView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@mipmap/jared_leto"
+            android:src="@mipmap/megan"
             app:mirrorAnySharp="@drawable/beauty"
             app:mirrorSharp="any"
             android:id="@+id/magicMirrorView" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center">
+
+        <com.kingja.magicmirror.MagicMirrorView
+            app:mirrorFilter="gray"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="12dp"
+            android:src="@mipmap/meimei"
+            app:mirrorCorner="10dp"
+            app:mirrorSharp="roundRect"/>
+
+        <com.kingja.magicmirror.MagicMirrorView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="12dp"
+            android:src="@mipmap/meimei"
+            app:mirrorCorner="10dp"
+            app:mirrorFilter="oldPicture"
+            app:mirrorSharp="roundRect"/>
+
+        <com.kingja.magicmirror.MagicMirrorView
+            app:mirrorFilter="saturation"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="12dp"
+            android:src="@mipmap/meimei"
+            app:mirrorCorner="10dp"
+            app:mirrorSharp="roundRect"/>
     </LinearLayout>
 
 
