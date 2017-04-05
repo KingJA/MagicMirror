@@ -4,13 +4,17 @@ A MagicMirror,support multiple shape ImageView. CLICK THE ***STAR***  if it's us
 ## Preview
 ![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/preview.png)
 
-| Basic Sharp|||||
-|:---|:----|:----|:----|:----|
+| **Basic Sharp**|||||
+|:---:|:----:|:----:|:----:|:----:|
 |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png) |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|
-|rect|circle|roundRect|oval|polygon|
+|`rect`|`circle`|`roundRect`|`oval`|`polygon`|
 
-| Filter|||||
-|:---|:----|:----|:----|:----|
+| **Any Sharp**|||||
+|:---:|:----:|:----:|:----:|:----:|
+|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png) |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|
+
+| **Filter**|||||
+|:---:|:----:|:----:|:----:|:----:|
 |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png) |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|
 |oldPicture|gray|saturation|||
 
