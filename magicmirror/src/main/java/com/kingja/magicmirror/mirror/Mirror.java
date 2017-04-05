@@ -3,11 +3,12 @@ package com.kingja.magicmirror.mirror;
 import android.graphics.Bitmap;
 import android.graphics.BitmapShader;
 import android.graphics.Canvas;
-import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
 import android.graphics.Shader;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
@@ -29,7 +30,7 @@ public abstract class Mirror {
     protected int height;
     protected int sides;
     protected int filter;
-    protected int resourceId;
+    protected int sharpResourceId;
     protected MagicMirrorView magicMirrorView;
 
 
@@ -38,8 +39,8 @@ public abstract class Mirror {
         return this;
     }
 
-    public Mirror setResourceId(@IdRes int resourceId) {
-        this.resourceId = resourceId;
+    public Mirror setSharpResourceId(@IdRes int sharpResourceId) {
+        this.sharpResourceId = sharpResourceId;
         return this;
     }
 
@@ -85,28 +86,35 @@ public abstract class Mirror {
     }
 
     public final Paint getShaderPaint() {
-        Bitmap mBitmap = drawable2Bitmap(magicMirrorView.getDrawable());
+        Bitmap mBitmap = drawableToBitmap(magicMirrorView.getDrawable());
         mBitmap = FilterHelper.getFilterBitmap(mBitmap, filter);
         BitmapShader mBitmapShader = new BitmapShader(mBitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
-        float scaleX = width * 1.0f / mBitmap.getWidth();
-        float scaleY = height * 1.0f / mBitmap.getHeight();
-        Paint mBitmapPaint = new Paint();
+        Paint mBitmapPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         setPersonalPaint(mBitmapPaint);
-        mBitmapPaint.setAntiAlias(true);
-        Matrix mMatrix = new Matrix();
-        mMatrix.setScale(scaleX, scaleY);
-        mBitmapShader.setLocalMatrix(mMatrix);
+        mBitmapShader.setLocalMatrix(magicMirrorView.getImageMatrix());
         mBitmapPaint.setShader(mBitmapShader);
         return mBitmapPaint;
     }
 
-
-    private Bitmap drawable2Bitmap(Drawable drawable) {
-        Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
-        Canvas canvas = new Canvas(bitmap);
-        if (drawable != null) {
-            drawable.setBounds(0, 0, width, height);
+    private Bitmap drawableToBitmap(Drawable drawable) {
+        if (drawable instanceof BitmapDrawable) {
+            return ((BitmapDrawable) drawable).getBitmap();
+        }
+        Bitmap bitmap;
+        try {
+            if (drawable instanceof ColorDrawable) {
+                bitmap = Bitmap.createBitmap(2, 2, Bitmap.Config.ARGB_8888);
+            } else {
+                int width = drawable.getIntrinsicWidth();
+                int height = drawable.getIntrinsicHeight();
+                bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+            }
+            Canvas canvas = new Canvas(bitmap);
+            drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
             drawable.draw(canvas);
+        } catch (Exception e) {
+            e.printStackTrace();
+            bitmap = null;
         }
         return bitmap;
     }

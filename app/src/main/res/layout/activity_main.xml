@@ -1,72 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:orientation="vertical">
 
     <LinearLayout
-        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="center">
 
-        <com.kingja.magicmirror.MagicMirrorView
-            android:layout_marginRight="12dp"
+        <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@mipmap/country"
-            app:mirrorSharp="rect"
-            app:mirrorFilter="gray" />
+            android:layout_marginRight="12dp"
+            android:src="@mipmap/johnny_depp"
+            />
 
         <com.kingja.magicmirror.MagicMirrorView
-            android:layout_marginRight="12dp"
+            android:scaleType="centerCrop"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@mipmap/country"
+            android:layout_marginRight="12dp"
+            android:src="@mipmap/johnny_depp"
             app:mirrorFilter="oldPicture"
-            app:mirrorSharp="circle" />
+            app:mirrorSharp="circle"/>
 
         <com.kingja.magicmirror.MagicMirrorView
+            android:scaleType="fitXY"
+            android:id="@+id/polygonMirror"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@mipmap/country"
-            app:mirrorSharp="polygon"
+            android:src="@mipmap/johnny_depp"
             app:mirrorFilter="saturation"
-            app:mirrorSides="6" />
+            app:mirrorSharp="polygon"
+            app:mirrorSides="6"/>
     </LinearLayout>
 
 
     <LinearLayout
-        android:layout_marginTop="16dp"
-        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center">
 
         <com.kingja.magicmirror.MagicMirrorView
-            android:layout_marginRight="12dp"
             android:layout_width="100dp"
             android:layout_height="80dp"
-            android:src="@mipmap/country"
+            android:layout_marginRight="12dp"
+            android:src="@mipmap/johnny_depp"
             app:mirrorCorner="10dp"
-            app:mirrorSharp="roundRect" />
+            app:mirrorSharp="roundRect"/>
 
         <com.kingja.magicmirror.MagicMirrorView
-            android:layout_marginRight="12dp"
             android:layout_width="100dp"
             android:layout_height="80dp"
-            android:src="@mipmap/country"
+            android:layout_marginRight="12dp"
+            android:src="@mipmap/johnny_depp"
             app:mirrorBorderColor="#333333"
             app:mirrorBorderWidth="1dp"
             app:mirrorCorner="20dp"
-            app:mirrorSharp="oval" />
+            app:mirrorSharp="oval"/>
 
         <com.kingja.magicmirror.MagicMirrorView
             android:layout_width="100dp"
             android:layout_height="80dp"
-            android:src="@mipmap/country"
+            android:src="@mipmap/johnny_depp"
             app:mirrorAnySharp="@drawable/beauty"
-            app:mirrorSharp="any" />
+            app:mirrorSharp="any"/>
     </LinearLayout>
 
 

@@ -3,21 +3,38 @@ package com.kingja.magicmirror;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
+import android.support.annotation.IntDef;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.widget.ImageView;
 
 import com.kingja.magicmirror.mirror.Mirror;
 
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
 /**
  * Description:TODO
- * Create Time:2017/3/14 21:30
+ * Create Time:2017/3/1421:30
  * Author:KingJA
  * Email:kingjavip@gmail.com
  */
 public class MagicMirrorView extends ImageView {
 
+    private int corner;
+    private int borderWidth;
+    private int borderColor;
+    private int sides;
+    private int filter;
+    private int sharpResourceId;
     private Mirror mirror;
+
+    public interface Filter {
+        int OLDPICTURE = 1;
+        int GRAY = 2;
+        int SATURATION = 3;
+    }
+
 
     public MagicMirrorView(Context context) {
         this(context, null);
@@ -29,16 +46,24 @@ public class MagicMirrorView extends ImageView {
 
     public MagicMirrorView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.MagicMirrorView);
-        mirror = MirrorFactory.createMirror(a.getInteger(R.styleable.MagicMirrorView_mirrorSharp, 0))
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.MagicMirrorView);
+        int sharpCode = typedArray.getInteger(R.styleable.MagicMirrorView_mirrorSharp, 0);
+        corner = dp2px(typedArray.getDimension(R.styleable.MagicMirrorView_mirrorCorner, 0));
+        borderWidth = dp2px(typedArray.getDimension(R.styleable.MagicMirrorView_mirrorBorderWidth, 0));
+        borderColor = typedArray.getColor(R.styleable.MagicMirrorView_mirrorBorderColor, 0xffffff);
+        sharpResourceId = typedArray.getResourceId(R.styleable.MagicMirrorView_mirrorAnySharp, 0);
+        filter = typedArray.getInteger(R.styleable.MagicMirrorView_mirrorFilter, 0);
+        sides = typedArray.getInteger(R.styleable.MagicMirrorView_mirrorSides, 5);
+        mirror = MirrorFactory.createMirror(sharpCode)
                 .setContext(this)
-                .setResourceId(a.getResourceId(R.styleable.MagicMirrorView_mirrorAnySharp, 0))
-                .setFilter(a.getInteger(R.styleable.MagicMirrorView_mirrorFilter, 0))
-                .setCorner(dp2px(a.getDimension(R.styleable.MagicMirrorView_mirrorCorner, 0)))
-                .setBorderWidth(dp2px(a.getDimension(R.styleable.MagicMirrorView_mirrorBorderWidth, 0)))
-                .setBorderColor(a.getColor(R.styleable.MagicMirrorView_mirrorBorderColor, 0xffffff))
-                .setSides(a.getInteger(R.styleable.MagicMirrorView_mirrorSides, 5));
-        a.recycle();
+                .setSharpResourceId(sharpResourceId)
+                .setFilter(filter)
+                .setCorner(corner)
+                .setBorderWidth(borderWidth)
+                .setBorderColor(borderColor)
+                .setSides(sides);
+        typedArray.recycle();
+        setScaleType(ScaleType.CENTER_CROP);
     }
 
     @Override
@@ -56,4 +81,41 @@ public class MagicMirrorView extends ImageView {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, getResources().getDisplayMetrics());
     }
 
+
+    public void setCorner(int conrner) {
+        mirror.setCorner(conrner);
+        invalidate();
+    }
+
+    public void setBorderWidth(int borderWidth) {
+        mirror.setBorderWidth(borderWidth);
+        invalidate();
+    }
+
+    public void setBorderColor(int borderColor) {
+        mirror.setBorderColor(borderColor);
+        invalidate();
+    }
+
+    public void setSides(int sides) {
+        mirror.setSides(sides);
+        invalidate();
+    }
+
+    public void setFilter(int filter) {
+        mirror.setFilter(filter);
+        invalidate();
+    }
+
+    public void setSharpResourceId(int sharpResourceId) {
+        mirror.setSharpResourceId(sharpResourceId);
+        invalidate();
+    }
+    @Override
+    public void setScaleType(ScaleType scaleType) {
+        if (ScaleType.FIT_XY == scaleType) {
+            scaleType = ScaleType.CENTER_CROP;
+        }
+        super.setScaleType(scaleType);
+    }
 }
