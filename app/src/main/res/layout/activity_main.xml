@@ -9,33 +9,33 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center">
+        android:gravity="center"
+        android:weightSum="1">
 
-        <ImageView
+        <com.kingja.magicmirror.MagicMirrorView
+            app:mirrorSharp="rect"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginRight="12dp"
-            android:src="@mipmap/johnny_depp"
-            />
+            android:src="@mipmap/jared_leto"
+            android:layout_weight="0.02" />
 
         <com.kingja.magicmirror.MagicMirrorView
             android:scaleType="centerCrop"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginRight="12dp"
-            android:src="@mipmap/johnny_depp"
-            app:mirrorFilter="oldPicture"
+            android:src="@mipmap/jared_leto"
             app:mirrorSharp="circle"/>
 
         <com.kingja.magicmirror.MagicMirrorView
-            android:scaleType="fitXY"
             android:id="@+id/polygonMirror"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@mipmap/johnny_depp"
+            android:src="@mipmap/jared_leto"
             app:mirrorFilter="saturation"
             app:mirrorSharp="polygon"
-            app:mirrorSides="6"/>
+            app:mirrorSides="5"/>
     </LinearLayout>
 
 
@@ -47,9 +47,9 @@
 
         <com.kingja.magicmirror.MagicMirrorView
             android:layout_width="100dp"
-            android:layout_height="80dp"
+            android:layout_height="100dp"
             android:layout_marginRight="12dp"
-            android:src="@mipmap/johnny_depp"
+            android:src="@mipmap/jared_leto"
             app:mirrorCorner="10dp"
             app:mirrorSharp="roundRect"/>
 
@@ -57,18 +57,16 @@
             android:layout_width="100dp"
             android:layout_height="80dp"
             android:layout_marginRight="12dp"
-            android:src="@mipmap/johnny_depp"
-            app:mirrorBorderColor="#333333"
-            app:mirrorBorderWidth="1dp"
-            app:mirrorCorner="20dp"
+            android:src="@mipmap/jared_leto"
             app:mirrorSharp="oval"/>
 
         <com.kingja.magicmirror.MagicMirrorView
             android:layout_width="100dp"
-            android:layout_height="80dp"
-            android:src="@mipmap/johnny_depp"
+            android:layout_height="100dp"
+            android:src="@mipmap/jared_leto"
             app:mirrorAnySharp="@drawable/beauty"
-            app:mirrorSharp="any"/>
+            app:mirrorSharp="any"
+            android:id="@+id/magicMirrorView" />
     </LinearLayout>
 
 
