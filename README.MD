@@ -3,6 +3,11 @@ A MagicMirror,support multiple shape ImageView. CLICK THE ***STAR***  if it's us
 
 ## Preview
 ![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/preview.png)
+
+| |||
+|:---|:----|:----|
+|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png) |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|
+
 ## Custom attribute
 | attribute | format | example  |
 | :------------- |:-------------| :-----|
@@ -36,6 +41,10 @@ A MagicMirror,support multiple shape ImageView. CLICK THE ***STAR***  if it's us
 
 **v1.1.1**
 - Initial release 
+
+## TODO
+
+* fix README.md
 
 ## Contact me
 Any questions,Welcome to contact me.
