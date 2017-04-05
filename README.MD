@@ -19,15 +19,15 @@ A MagicMirror,support multiple shape ImageView. CLICK THE ***STAR***  if it's us
 |oldPicture|gray|saturation|||
 
 ## Custom attribute
-| attribute | format | example  |belong  |
+| attribute | format | belong  |ps  |
 | :------------- |:-------------| :-----|:-----|
-| mirrorSharp | int      | app:mirrorSharp="circle" |ALL|
-| mirrorSides | int      | app:mirrorSides="6" |polygon|
-| mirrorCorner | dimension      | app:mirrorCorner="8dp" |roundRect|
-| mirrorBorderWidth | dimension      | app:mirrorBorderWidth="1dp" |!any|
-| mirrorBorderColor | color/reference     | app:mirrorBorderColor="@color/red" |!any|
-| mirrorAnySharp | reference     | app:mirrorAnySharp="@drawable/beauty" |polygon|
-| mirrorFilter | int     | app:mirrorFilter="oldPicture" |ALL|
+| mirrorSharp | enum      | ALL |`rect``circle``roundRect``oval``polygon`|
+| mirrorSides | int      | polygon|>2|
+| mirrorCorner | dimension      | roundRect ||
+| mirrorBorderWidth | dimension      | !any ||
+| mirrorBorderColor | color/reference     | !any ||
+| mirrorAnySharp | reference     | polygon |put in drawable|
+| mirrorFilter | enum     | ALL |`oldPicture` `gray` `saturation`|
 
 <!--![](https://github.com/KingJA/SwitchButton/blob/master/img/mark.png)-->
 ## Gradle

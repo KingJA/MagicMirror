@@ -2,17 +2,17 @@
 <resources>
     <declare-styleable name="MagicMirrorView">
         <attr name="mirrorSharp">
-            <flag name="rect" value="0" />
-            <flag name="circle" value="1" />
-            <flag name="roundRect" value="2" />
-            <flag name="oval" value="3" />
-            <flag name="polygon" value="4" />
-            <flag name="any" value="5" />
+            <enum name="rect" value="0" />
+            <enum name="circle" value="1" />
+            <enum name="roundRect" value="2" />
+            <enum name="oval" value="3" />
+            <enum name="polygon" value="4" />
+            <enum name="any" value="5" />
         </attr>
         <attr name="mirrorFilter">
-            <flag name="oldPicture" value="1" />
-            <flag name="gray" value="2" />
-            <flag name="saturation" value="3" />
+            <enum name="oldPicture" value="1" />
+            <enum name="gray" value="2" />
+            <enum name="saturation" value="3" />
         </attr>
 
         <attr name="mirrorSides" format="integer" />
