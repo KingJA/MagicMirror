@@ -4,19 +4,26 @@ A MagicMirror,support multiple shape ImageView. CLICK THE ***STAR***  if it's us
 ## Preview
 ![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/preview.png)
 
-| |||
-|:---|:----|:----|
-|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png) |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|
+| Basic Sharp|||||
+|:---|:----|:----|:----|:----|
+|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png) |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|
+|rect|circle|roundRect|oval|polygon|
+
+| Filter|||||
+|:---|:----|:----|:----|:----|
+|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png) |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/item.png)|
+|oldPicture|gray|saturation|||
 
 ## Custom attribute
-| attribute | format | example  |
-| :------------- |:-------------| :-----|
-| mirrorSharp | int      | app:mirrorSharp="circle" |
-| mirrorSides | int      | app:mirrorSides="6" |
-| mirrorCorner | dimension      | app:mirrorCorner="8dp" |
-| mirrorBorderWidth | dimension      | app:mirrorBorderWidth="1dp" |
-| mirrorBorderColor | color/reference     | app:mirrorBorderColor="@color/red" |
-| mirrorAnySharp | reference     | app:mirrorAnySharp="@drawable/beauty" |
+| attribute | format | example  |belong  |
+| :------------- |:-------------| :-----|:-----|
+| mirrorSharp | int      | app:mirrorSharp="circle" |ALL|
+| mirrorSides | int      | app:mirrorSides="6" |polygon|
+| mirrorCorner | dimension      | app:mirrorCorner="8dp" |roundRect|
+| mirrorBorderWidth | dimension      | app:mirrorBorderWidth="1dp" |!any|
+| mirrorBorderColor | color/reference     | app:mirrorBorderColor="@color/red" |!any|
+| mirrorAnySharp | reference     | app:mirrorAnySharp="@drawable/beauty" |polygon|
+| mirrorFilter | int     | app:mirrorFilter="oldPicture" |ALL|
 
 <!--![](https://github.com/KingJA/SwitchButton/blob/master/img/mark.png)-->
 ## Gradle
