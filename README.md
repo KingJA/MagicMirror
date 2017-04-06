@@ -2,7 +2,8 @@
 
 [中文文档](README-ch.md)
 
-A MagicMirror,support multiple shape ImageView. CLICK THE ***STAR***  if it's useful for you.
+It's a little bit different from other library.
+A MagicMirror,support multiple shape for ImageView. CLICK THE ***STAR***  if it's useful to you.
 
 ## Preview
 
