@@ -49,7 +49,7 @@ public class FilterHelper {
     }
 
     private static float[] getFilter(int filter) {
-        float[] filterArr = CLEAR;
+        float[] filterArr ;
         switch (filter) {
             case 1:
                 filterArr = OLDPICTURE;
@@ -59,6 +59,9 @@ public class FilterHelper {
                 break;
             case 3:
                 filterArr = SATURATION;
+                break;
+            default:
+                filterArr = CLEAR;
                 break;
         }
         return filterArr;

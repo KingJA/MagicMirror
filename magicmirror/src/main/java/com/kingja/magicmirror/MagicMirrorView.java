@@ -3,15 +3,11 @@ package com.kingja.magicmirror;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
-import android.support.annotation.IntDef;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.widget.ImageView;
 
 import com.kingja.magicmirror.mirror.Mirror;
-
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
 
 /**
  * Description:TODO
