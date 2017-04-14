@@ -3,6 +3,7 @@ package com.kingja.magicmirror;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.widget.ImageView;
@@ -17,7 +18,6 @@ import com.kingja.magicmirror.mirror.Mirror;
  */
 public class MagicMirrorView extends ImageView {
 
-    private static final int DEFAULT_BORDER_COLOR = 0x00000000;
     private static final int DEFAULT_SIDES = 5;
     private int corner;
     private int borderWidth;
@@ -48,7 +48,7 @@ public class MagicMirrorView extends ImageView {
         int sharpCode = typedArray.getInteger(R.styleable.MagicMirrorView_mirrorSharp, 0);
         corner = Util.dp2px(context, typedArray.getDimension(R.styleable.MagicMirrorView_mirrorCorner, 0));
         borderWidth = Util.dp2px(context, typedArray.getDimension(R.styleable.MagicMirrorView_mirrorBorderWidth, 0));
-        borderColor = typedArray.getColor(R.styleable.MagicMirrorView_mirrorBorderColor, DEFAULT_BORDER_COLOR);
+        borderColor = typedArray.getColor(R.styleable.MagicMirrorView_mirrorBorderColor, Color.TRANSPARENT);
         sharpResourceId = typedArray.getResourceId(R.styleable.MagicMirrorView_mirrorAnySharp, 0);
         filter = typedArray.getInteger(R.styleable.MagicMirrorView_mirrorFilter, 0);
         sides = typedArray.getInteger(R.styleable.MagicMirrorView_mirrorSides, DEFAULT_SIDES);
