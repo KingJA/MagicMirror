@@ -17,6 +17,8 @@ import com.kingja.magicmirror.mirror.Mirror;
  */
 public class MagicMirrorView extends ImageView {
 
+    private static final int DEFAULT_BORDER_COLOR = 0x00000000;
+    private static final int DEFAULT_SIDES = 5;
     private int corner;
     private int borderWidth;
     private int borderColor;
@@ -44,12 +46,12 @@ public class MagicMirrorView extends ImageView {
         super(context, attrs, defStyleAttr);
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.MagicMirrorView);
         int sharpCode = typedArray.getInteger(R.styleable.MagicMirrorView_mirrorSharp, 0);
-        corner = dp2px(typedArray.getDimension(R.styleable.MagicMirrorView_mirrorCorner, 0));
-        borderWidth = dp2px(typedArray.getDimension(R.styleable.MagicMirrorView_mirrorBorderWidth, 0));
-        borderColor = typedArray.getColor(R.styleable.MagicMirrorView_mirrorBorderColor, 0xffffff);
+        corner = Util.dp2px(context, typedArray.getDimension(R.styleable.MagicMirrorView_mirrorCorner, 0));
+        borderWidth = Util.dp2px(context, typedArray.getDimension(R.styleable.MagicMirrorView_mirrorBorderWidth, 0));
+        borderColor = typedArray.getColor(R.styleable.MagicMirrorView_mirrorBorderColor, DEFAULT_BORDER_COLOR);
         sharpResourceId = typedArray.getResourceId(R.styleable.MagicMirrorView_mirrorAnySharp, 0);
         filter = typedArray.getInteger(R.styleable.MagicMirrorView_mirrorFilter, 0);
-        sides = typedArray.getInteger(R.styleable.MagicMirrorView_mirrorSides, 5);
+        sides = typedArray.getInteger(R.styleable.MagicMirrorView_mirrorSides, DEFAULT_SIDES);
         mirror = MirrorFactory.createMirror(sharpCode)
                 .setContext(this)
                 .setSharpResourceId(sharpResourceId)
@@ -71,10 +73,6 @@ public class MagicMirrorView extends ImageView {
     @Override
     protected void onDraw(Canvas canvas) {
         mirror.drawMirror(canvas);
-    }
-
-    protected int dp2px(float dp) {
-        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, getResources().getDisplayMetrics());
     }
 
 
@@ -107,6 +105,7 @@ public class MagicMirrorView extends ImageView {
         mirror.setSharpResourceId(sharpResourceId);
         invalidate();
     }
+
     @Override
     public void setScaleType(ScaleType scaleType) {
         if (ScaleType.FIT_XY == scaleType) {
