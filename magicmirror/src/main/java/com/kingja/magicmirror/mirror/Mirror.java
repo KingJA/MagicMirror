@@ -39,7 +39,7 @@ public abstract class Mirror {
         return this;
     }
 
-    public Mirror setSharpResourceId(@IdRes int sharpResourceId) {
+    public Mirror setShapeResourceId(@IdRes int sharpResourceId) {
         this.sharpResourceId = sharpResourceId;
         return this;
     }

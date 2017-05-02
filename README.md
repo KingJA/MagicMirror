@@ -3,16 +3,16 @@
 [中文文档](README-ch.md)
 
 It's a little bit different from other library,
-supports multiple shape for ImageView,and some most common filter. CLICK THE ***STAR***  if it's useful to you.
+supports multiple shapes for ImageView,and some most common filter. CLICK THE ***STAR***  if it's useful to you.
 
 ## Features
-* Basic Sharp : some most common sharps.
+* Basic Shape : some most common shapes.
     * rect
     * circle
     * roundRect
     * oval
     * polygon
-* Mask Sharp : any shapes based on mask picture.
+* Mask Shape : any shapes based on mask picture.
 * Filter : some most common filters.
     * gray
     * oldPicture
@@ -21,12 +21,12 @@ supports multiple shape for ImageView,and some most common filter. CLICK THE ***
 
 ## Preview
 
-| **Basic Sharp**|||||
+| **Basic Shape**|||||
 |:---:|:----:|:----:|:----:|:----:|
 |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/rect.png) |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/circle.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/round_rect.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/oval.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/polygon.png)|
 |rect|circle|roundRect|oval|polygon|
 
-| **Mask Sharp**|||||
+| **Mask Shape**|||||
 |:---:|:----:|:----:|:----:|:----:|
 |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/bg_heart.png) |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/bg_apple.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/bg_tag.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/bg_lemon.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/bg_beauty.png)|
 |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/heart.png) |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/apple.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/tag.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/lemon.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/beauty.png)|

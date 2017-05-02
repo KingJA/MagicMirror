@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="MagicMirrorView">
-        <attr name="mirrorSharp">
+        <attr name="mirrorShape">
             <enum name="rect" value="0" />
             <enum name="circle" value="1" />
             <enum name="roundRect" value="2" />
@@ -19,6 +19,6 @@
         <attr name="mirrorCorner" format="dimension" />
         <attr name="mirrorBorderWidth" format="dimension" />
         <attr name="mirrorBorderColor" format="reference|color" />
-        <attr name="mirrorAnySharp" format="reference" />
+        <attr name="mirrorAnyShape" format="reference" />
     </declare-styleable>
 </resources>

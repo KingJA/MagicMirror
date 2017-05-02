@@ -5,7 +5,6 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.util.AttributeSet;
-import android.util.TypedValue;
 import android.widget.ImageView;
 
 import com.kingja.magicmirror.mirror.Mirror;
@@ -24,7 +23,7 @@ public class MagicMirrorView extends ImageView {
     private int borderColor;
     private int sides;
     private int filter;
-    private int sharpResourceId;
+    private int shapeResourceId;
     private Mirror mirror;
 
     public interface Filter {
@@ -45,16 +44,16 @@ public class MagicMirrorView extends ImageView {
     public MagicMirrorView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.MagicMirrorView);
-        int sharpCode = typedArray.getInteger(R.styleable.MagicMirrorView_mirrorSharp, 0);
+        int sharpCode = typedArray.getInteger(R.styleable.MagicMirrorView_mirrorShape, 0);
         corner = Util.dp2px(context, typedArray.getDimension(R.styleable.MagicMirrorView_mirrorCorner, 0));
         borderWidth = Util.dp2px(context, typedArray.getDimension(R.styleable.MagicMirrorView_mirrorBorderWidth, 0));
         borderColor = typedArray.getColor(R.styleable.MagicMirrorView_mirrorBorderColor, Color.TRANSPARENT);
-        sharpResourceId = typedArray.getResourceId(R.styleable.MagicMirrorView_mirrorAnySharp, 0);
+        shapeResourceId = typedArray.getResourceId(R.styleable.MagicMirrorView_mirrorAnyShape, 0);
         filter = typedArray.getInteger(R.styleable.MagicMirrorView_mirrorFilter, 0);
         sides = typedArray.getInteger(R.styleable.MagicMirrorView_mirrorSides, DEFAULT_SIDES);
         mirror = MirrorFactory.createMirror(sharpCode)
                 .setContext(this)
-                .setSharpResourceId(sharpResourceId)
+                .setShapeResourceId(shapeResourceId)
                 .setFilter(filter)
                 .setCorner(corner)
                 .setBorderWidth(borderWidth)
@@ -101,8 +100,8 @@ public class MagicMirrorView extends ImageView {
         invalidate();
     }
 
-    public void setSharpResourceId(int sharpResourceId) {
-        mirror.setSharpResourceId(sharpResourceId);
+    public void setShapeResourceId(int shapeResourceId) {
+        mirror.setShapeResourceId(shapeResourceId);
         invalidate();
     }
 
