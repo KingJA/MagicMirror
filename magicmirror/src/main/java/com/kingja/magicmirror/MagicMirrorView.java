@@ -4,8 +4,8 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
-import android.widget.ImageView;
 
 import com.kingja.magicmirror.mirror.Mirror;
 
@@ -15,7 +15,7 @@ import com.kingja.magicmirror.mirror.Mirror;
  * Author:KingJA
  * Email:kingjavip@gmail.com
  */
-public class MagicMirrorView extends ImageView {
+public class MagicMirrorView extends AppCompatImageView {
 
     private static final int DEFAULT_SIDES = 5;
     private int corner;
