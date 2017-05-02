@@ -1,8 +1,22 @@
-# MagicMirror
+# MagicMirror 
 
-[English Document](README.md)
+[English](README.md)
 
-自定义图形控件，支持多种形状，边框，滤镜。如果对您有帮助，请点击Star.
+提供多种形状，基于蒙版图的任意形状及常用滤镜的ImageView。如果对您有用，请点STAR。
+
+## Features
+* 基本形状
+    * rect
+    * circle
+    * roundRect
+    * oval
+    * polygon
+* 蒙版形状
+* 滤镜
+    * gray
+    * oldPicture
+    * saturation
+    
 
 ## Preview
 
@@ -15,7 +29,7 @@
 |:---:|:----:|:----:|:----:|:----:|
 |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/bg_heart.png) |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/bg_apple.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/bg_tag.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/bg_lemon.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/bg_beauty.png)|
 |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/heart.png) |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/apple.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/tag.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/lemon.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/beauty.png)|
-|heart|apple|tag|lemon|beauty|
+|heart.png|apple.png|tag.png|lemon.png|beauty.png|
 
 | **滤镜**|||||
 |:---:|:----:|:----:|:----:|:----:|
@@ -23,53 +37,64 @@
 |original |gray|oldPicture|saturation||
 
 ## 自定义属性
-| 参数 | 格式 | 所属  |备注  |
+| attribute | format | belong  |ps  |
 | :------------- |:-------------| :-----|:-----|
 | mirrorSharp | enum      | ALL |rect circle roundRect oval polygon any|
 | mirrorSides | int      | polygon|>2|
 | mirrorCorner | dimension      | roundRect ||
 | mirrorBorderWidth | dimension      | !any ||
 | mirrorBorderColor | color/reference     | !any ||
-| mirrorAnySharp | reference     | polygon |res must be put in drawable folder|
+| mirrorAnySharp | reference     | polygon |蒙版图片须放在drawable文件夹下|
 | mirrorFilter | enum     | ALL |oldPicture gray saturation|
 
-<!--![](https://github.com/KingJA/SwitchButton/blob/master/img/mark.png)-->
+
 ## Gradle
-```java
+```gradle
  compile 'com.kingja.magicmirror:magicmirror:1.1.1'
 ```
 
 ## 使用
-![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/rect.png)
-```java
- <com.kingja.magicmirror.MagicMirrorView
-        app:mirrorSharp="roundRect"
-        app:mirrorCorner="10dp"
-        app:mirrorBorderWidth="1dp"
-        app:mirrorBorderColor="#3957f7"
-        android:layout_marginTop="8dp"
-        android:src="@mipmap/country"
-        android:layout_width="100dp"
-        android:layout_height="80dp"/>
+* 基本形状
+```xml
+<com.kingja.magicmirror.MagicMirrorView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/jared_leto"
+            app:mirrorSharp="roundRect"
+            app:mirrorBorderWidth="2dp"
+            app:mirrorBorderColor="#bfbfbf"
+            app:mirrorCorner="10dp"/>
 ```
-
-## 更新日志
+* 蒙版形状 (蒙版图片须放在drawable文件夹下)
+```xml
+<com.kingja.magicmirror.MagicMirrorView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/megan"
+            app:mirrorAnySharp="@drawable/lemon"
+            app:mirrorSharp="any"/>
+```
+* 滤镜
+```xml
+<com.kingja.magicmirror.MagicMirrorView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/taylor"
+            app:mirrorFilter="oldPicture"/>
+```
+## Changelog
 
 **v1.1.1**
 - Initial release 
 
-## TODO
-
-* fix README.md
-
-## 联系我
-如果有任何问题，欢迎联系。
+## Contact me
+Any questions,Welcome to contact me.
 * email:kingjavip@gmail.com
 * QQ:87049319
 * Weixin:darabbbit
 * [My blog](https://kingja.github.io)
 
-## 开源许可证
+## License
 
     Copyright 2016 KingJA
 

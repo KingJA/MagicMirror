@@ -2,8 +2,22 @@
 
 [中文文档](README-ch.md)
 
-It's a little bit different from other library.
-A MagicMirror,support multiple shape for ImageView. CLICK THE ***STAR***  if it's useful to you.
+It's a little bit different from other library,
+supports multiple shape for ImageView,and some most common filter. CLICK THE ***STAR***  if it's useful to you.
+
+## Features
+* Basic Sharp : some most common sharps.
+    * rect
+    * circle
+    * roundRect
+    * oval
+    * polygon
+* Mask Sharp : any shapes based on mask picture.
+* Filter : some most common filters.
+    * gray
+    * oldPicture
+    * saturation
+    
 
 ## Preview
 
@@ -16,7 +30,7 @@ A MagicMirror,support multiple shape for ImageView. CLICK THE ***STAR***  if it'
 |:---:|:----:|:----:|:----:|:----:|
 |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/bg_heart.png) |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/bg_apple.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/bg_tag.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/bg_lemon.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/bg_beauty.png)|
 |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/heart.png) |![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/apple.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/tag.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/lemon.png)|![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/beauty.png)|
-|heart|apple|tag|lemon|beauty|
+|heart.png|apple.png|tag.png|lemon.png|beauty.png|
 
 | **Filter**|||||
 |:---:|:----:|:----:|:----:|:----:|
@@ -36,13 +50,13 @@ A MagicMirror,support multiple shape for ImageView. CLICK THE ***STAR***  if it'
 
 
 ## Gradle
-```java
+```gradle
  compile 'com.kingja.magicmirror:magicmirror:1.1.1'
 ```
 
 ## Usage
 * Basic Sharp
-```java
+```xml
 <com.kingja.magicmirror.MagicMirrorView
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -53,7 +67,7 @@ A MagicMirror,support multiple shape for ImageView. CLICK THE ***STAR***  if it'
             app:mirrorCorner="10dp"/>
 ```
 * Mask Sharp (the res of mirrorAnySharp must be put in res/drawable)
-```java
+```xml
 <com.kingja.magicmirror.MagicMirrorView
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -62,7 +76,7 @@ A MagicMirror,support multiple shape for ImageView. CLICK THE ***STAR***  if it'
             app:mirrorSharp="any"/>
 ```
 * Filter
-```java
+```xml
 <com.kingja.magicmirror.MagicMirrorView
             android:layout_width="100dp"
             android:layout_height="100dp"
