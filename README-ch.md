@@ -2,7 +2,7 @@
 
 [English](README.md)
 
-提供多种形状，基于蒙版图的任意形状及常用滤镜的ImageView。如果对您有用，请点STAR。
+提供多种常用形状，基于蒙版图的任意形状及常用滤镜的自定义ImageView。如果对您有用，请点STAR。
 
 ## Features
 * 基本形状
@@ -53,7 +53,7 @@
  compile 'com.kingja.magicmirror:magicmirror:1.1.1'
 ```
 
-## 使用
+## Usage
 * 基本形状
 ```xml
 <com.kingja.magicmirror.MagicMirrorView
