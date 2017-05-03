@@ -9,7 +9,7 @@ import android.graphics.Paint;
 import android.graphics.Path;
 
 /**
- * Description:TODO
+ * Description:Any shape
  * Create Time:2017/3/22 21:31
  * Author:KingJA
  * Email:kingjavip@gmail.com
@@ -17,27 +17,15 @@ import android.graphics.Path;
 public class AnyMirror extends Mirror {
 
     @Override
-    public int getMeasuredMirrorWidth() {
-        width = magicMirrorView.getMeasuredWidth();
-        return width;
-    }
-
-    @Override
-    public int getMeasuredMirrorHeight() {
-        this.height = magicMirrorView.getMeasuredHeight();
-        return height;
-    }
-
-    @Override
     public Path getMirrorPath() {
         if (sharpResourceId == 0) {
             throw new IllegalArgumentException("attr 'mirrorAnySharp' can't be empty");
         }
-        Bitmap bitmap = getBitmapFromRes(magicMirrorView.getResources(), sharpResourceId, width, height);
+        Bitmap bitmap = getBitmapFromRes(magicMirrorView.getResources(), sharpResourceId, getWidth(), getHeight());
         Path path = getPixelsPath(bitmap);
         bitmap.recycle();
-        float scaleX = width * 1.0f / bitmap.getWidth();
-        float scaleY = height * 1.0f / bitmap.getHeight();
+        float scaleX = getWidth() * 1.0f / bitmap.getWidth();
+        float scaleY = getHeight() * 1.0f / bitmap.getHeight();
         Matrix matrix = new Matrix();
         matrix.setScale(scaleX, scaleY);
         path.transform(matrix);

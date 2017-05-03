@@ -7,7 +7,7 @@ import android.graphics.ColorMatrixColorFilter;
 import android.graphics.Paint;
 
 /**
- * Description：TODO
+ * Description：FilterHelper used for supporting the filter effect.
  * Create Time：2017/3/28 22:05
  * Author:KingJA
  * Email:kingjavip@gmail.com
@@ -41,9 +41,9 @@ public class FilterHelper {
         Bitmap bmp = Bitmap.createBitmap(bitmap.getWidth(), bitmap.getHeight(), Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(bmp);
         Paint paint = new Paint();
-        ColorMatrix hueMatrix = new ColorMatrix();
-        hueMatrix.set(getFilter(filter));
-        paint.setColorFilter(new ColorMatrixColorFilter(hueMatrix));
+        ColorMatrix colorMatrix = new ColorMatrix();
+        colorMatrix.set(getFilter(filter));
+        paint.setColorFilter(new ColorMatrixColorFilter(colorMatrix));
         canvas.drawBitmap(bitmap, 0, 0, paint);
         return bmp;
     }

@@ -54,9 +54,26 @@ public abstract class Mirror {
         return this;
     }
 
+    public int getCorner() {
+        return corner;
+    }
+
     public Mirror setBorderWidth(int borderWidth) {
         this.borderWidth = borderWidth;
         return this;
+    }
+
+    public int getBorderWidth() {
+        return borderWidth;
+    }
+
+    public Mirror setSides(int sides) {
+        this.sides = sides;
+        return this;
+    }
+
+    public int getSides() {
+        return sides;
     }
 
     public Mirror setBorderColor(int borderColor) {
@@ -64,9 +81,20 @@ public abstract class Mirror {
         return this;
     }
 
-    public Mirror setSides(int sides) {
-        this.sides = sides;
-        return this;
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
     }
 
     public final Paint getStrokePaint() {
@@ -129,9 +157,15 @@ public abstract class Mirror {
     protected void setPersonalPaint(Paint bitmapPaint) {
     }
 
-    public abstract int getMeasuredMirrorWidth();
+    public int getMeasuredMirrorWidth() {
+        width = Math.min(magicMirrorView.getMeasuredWidth(), magicMirrorView.getMeasuredHeight());
+        return Math.min(magicMirrorView.getMeasuredWidth(), magicMirrorView.getMeasuredHeight());
+    }
 
-    public abstract int getMeasuredMirrorHeight();
+    public int getMeasuredMirrorHeight() {
+        height = Math.min(magicMirrorView.getMeasuredWidth(), magicMirrorView.getMeasuredHeight());
+        return Math.min(magicMirrorView.getMeasuredWidth(), magicMirrorView.getMeasuredHeight());
+    }
 
     public abstract Path getMirrorPath();
 

@@ -9,22 +9,12 @@ import android.graphics.Path;
  * Email:kingjavip@gmail.com
  */
 public class CircleMirror extends Mirror {
-    @Override
-    public int getMeasuredMirrorWidth() {
-        width = Math.min(magicMirrorView.getMeasuredWidth(), magicMirrorView.getMeasuredHeight());
-        return width;
-    }
-
-    @Override
-    public int getMeasuredMirrorHeight() {
-        height = Math.min(magicMirrorView.getMeasuredWidth(), magicMirrorView.getMeasuredHeight());
-        return height;
-    }
 
     @Override
     public Path getMirrorPath() {
         Path path = new Path();
-        path.addCircle(getRectF().centerX(), getRectF().centerY(), width * 0.5f - borderWidth * 0.5f, Path.Direction.CW);
+        path.addCircle(getRectF().centerX(), getRectF().centerY(), getMeasuredMirrorWidth() * 0.5f - getBorderWidth() * 0.5f, Path
+                .Direction.CW);
         return path;
     }
 }

@@ -10,7 +10,7 @@ import android.util.AttributeSet;
 import com.kingja.magicmirror.mirror.Mirror;
 
 /**
- * Description:TODO
+ * Description:MagicMirrorView
  * Create Time:2017/3/1421:30
  * Author:KingJA
  * Email:kingjavip@gmail.com

@@ -3,7 +3,7 @@ package com.kingja.magicmirror.mirror;
 import android.graphics.Path;
 
 /**
- * Description:TODO
+ * Description:Oval
  * Create Time:2017/3/22 21:31
  * Author:KingJA
  * Email:kingjavip@gmail.com
@@ -11,14 +11,14 @@ import android.graphics.Path;
 public class OvalMirror extends Mirror {
     @Override
     public int getMeasuredMirrorWidth() {
-        width = magicMirrorView.getMeasuredWidth();
-        return width;
+        setWidth(magicMirrorView.getMeasuredWidth());
+        return magicMirrorView.getMeasuredWidth();
     }
 
     @Override
     public int getMeasuredMirrorHeight() {
-        this.height = magicMirrorView.getMeasuredHeight();
-        return height;
+        setHeight(magicMirrorView.getMeasuredHeight());
+        return magicMirrorView.getMeasuredHeight();
     }
 
     @Override
