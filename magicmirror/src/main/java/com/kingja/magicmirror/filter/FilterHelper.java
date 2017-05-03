@@ -7,8 +7,8 @@ import android.graphics.ColorMatrixColorFilter;
 import android.graphics.Paint;
 
 /**
- * Description：FilterHelper used for supporting the filter effect.
- * Create Time：2017/3/28 22:05
+ * Description:FilterHelper used for supporting the filter effect.
+ * Create Time:2017/3/28 22:05
  * Author:KingJA
  * Email:kingjavip@gmail.com
  */

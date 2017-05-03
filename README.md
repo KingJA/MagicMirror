@@ -51,7 +51,7 @@ it supports multiple shapes for ImageView,and also some most common filter. CLIC
 
 ## Gradle
 ```gradle
- compile 'com.kingja.magicmirror:magicmirror:1.1.1'
+ compile 'com.kingja.magicmirror:magicmirror:1.2.0'
 ```
 
 ## Usage
@@ -90,6 +90,8 @@ You alos can customize your shape by extending the Mirror and overriding the met
 
 ## Changelog
 
+**v1.2.0**
+- add filter
 **v1.1.1**
 - Initial release 
 
