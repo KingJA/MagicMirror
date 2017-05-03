@@ -1,5 +1,3 @@
-# MagicMirror 
-
 ![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/logo_magicmirror.png)
 
 English | [中文](README-ch.md)
