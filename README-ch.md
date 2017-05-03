@@ -44,7 +44,7 @@
 | mirrorCorner | dimension      | roundRect ||
 | mirrorBorderWidth | dimension      | !any ||
 | mirrorBorderColor | color/reference     | !any ||
-| mirrorAnySharp | reference     | polygon |蒙版图片须放在drawable文件夹下|
+| mirrorMaskRes | reference     | polygon |蒙版图片须放在drawable文件夹下|
 | mirrorFilter | enum     | ALL |oldPicture gray saturation|
 
 
@@ -71,7 +71,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@mipmap/megan"
-            app:mirrorAnySharp="@drawable/lemon"
+            app:mirrorMaskRes="@drawable/lemon"
             app:mirrorSharp="any"/>
 ```
 * 滤镜

@@ -1,5 +1,7 @@
 # MagicMirror 
 
+![](https://github.com/KingJA/MagicMirrorView/blob/master/readme/logo_magicmirror.png)
+
 English | [中文](README-ch.md)
 
 It's a little bit different from other image shape library,
@@ -45,7 +47,7 @@ it supports multiple shapes for ImageView,and also some most common filter. CLIC
 | mirrorCorner | dimension      | roundRect ||
 | mirrorBorderWidth | dimension      | !any ||
 | mirrorBorderColor | color/reference     | !any ||
-| mirrorAnySharp | reference     | polygon |res must be put in drawable folder|
+| mirrorMaskRes | reference     | polygon |res must be put in drawable folder|
 | mirrorFilter | enum     | ALL |oldPicture gray saturation|
 
 
@@ -67,13 +69,13 @@ it supports multiple shapes for ImageView,and also some most common filter. CLIC
             app:mirrorCorner="10dp"/>
 ```
 
-* Mask Sharp (the res of mirrorAnySharp must be put in res/drawable)
+* Mask Sharp (the res of mirrorMaskRes must be put in res/drawable)
 ```xml
 <com.kingja.magicmirror.MagicMirrorView
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@mipmap/megan"
-            app:mirrorAnySharp="@drawable/lemon"
+            app:mirrorMaskRes="@drawable/lemon"
             app:mirrorSharp="any"/>
 ```
 * Filter
@@ -86,7 +88,7 @@ it supports multiple shapes for ImageView,and also some most common filter. CLIC
 ```
 * Custom Shape
 
-You alos can customize your shape by extending the Mirror and overriding the method `getMirrorPath()`.
+You also can customize your shape by extending the Mirror and overriding the method `getMirrorPath()`.
 
 ## Changelog
 
