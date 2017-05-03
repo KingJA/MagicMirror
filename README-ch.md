@@ -40,7 +40,7 @@
 | attribute | format | belong  |ps  |
 | :------------- |:-------------| :-----|:-----|
 | mirrorSharp | enum      | ALL |rect circle roundRect oval polygon any|
-| mirrorSides | int      | polygon|>2|
+| mirrorSides | int      | polygon|边数大于2|
 | mirrorCorner | dimension      | roundRect ||
 | mirrorBorderWidth | dimension      | !any ||
 | mirrorBorderColor | color/reference     | !any ||
@@ -83,6 +83,7 @@
             app:mirrorFilter="oldPicture"/>
 ```
 * 自定义形状
+
 你可以通过继承 Mirror类复写getMirrorPath()方法来定制自己的形状。
 
 ## Changelog

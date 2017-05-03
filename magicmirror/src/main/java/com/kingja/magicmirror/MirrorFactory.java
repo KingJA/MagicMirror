@@ -9,7 +9,7 @@ import com.kingja.magicmirror.mirror.RectMirror;
 import com.kingja.magicmirror.mirror.RoundRectMirror;
 
 /**
- * Description:TODO
+ * Description:Factory patten to get the expectant mirror.
  * Create Time:2017/3/22 21:23
  * Author:KingJA
  * Email:kingjavip@gmail.com

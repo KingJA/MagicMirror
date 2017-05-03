@@ -48,6 +48,7 @@ public class MagicMirrorView extends AppCompatImageView {
                 .setBorderColor(borderColor)
                 .setSides(sides);
         typedArray.recycle();
+        //ScaleType.CENTER_CROP for default
         setScaleType(ScaleType.CENTER_CROP);
     }
 

@@ -4,7 +4,7 @@ import android.content.Context;
 import android.util.TypedValue;
 
 /**
- * Description:TODO
+ * Description:Util
  * Create Time:2017/4/14 14:05
  * Author:KingJA
  * Email:kingjavip@gmail.com

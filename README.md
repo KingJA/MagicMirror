@@ -1,6 +1,6 @@
 # MagicMirror 
 
-English | [中文文档](README-ch.md)
+English | [中文](README-ch.md)
 
 It's a little bit different from other image shape library,
 it supports multiple shapes for ImageView,and also some most common filter. CLICK THE ***STAR***  if it's useful to you.
@@ -85,7 +85,9 @@ it supports multiple shapes for ImageView,and also some most common filter. CLIC
             app:mirrorFilter="oldPicture"/>
 ```
 * Custom Shape
+
 You alos can customize your shape by extending the Mirror and overriding the method `getMirrorPath()`.
+
 ## Changelog
 
 **v1.1.1**
