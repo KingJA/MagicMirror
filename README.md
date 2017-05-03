@@ -96,9 +96,6 @@ You also can customize your shape by extending the Mirror and overriding the met
 **v1.1.1**
 * Initial release
 
-## TODO
-
-* fix README.md
 
 ## Contact me
 Any questions,Welcome to contact me.
