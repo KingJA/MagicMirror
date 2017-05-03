@@ -1,9 +1,9 @@
 # MagicMirror 
 
-[中文文档](README-ch.md)
+English | [中文文档](README-ch.md)
 
-It's a little bit different from other library,
-supports multiple shapes for ImageView,and some most common filter. CLICK THE ***STAR***  if it's useful to you.
+It's a little bit different from other image shape library,
+it supports multiple shapes for ImageView,and also some most common filter. CLICK THE ***STAR***  if it's useful to you.
 
 ## Features
 * Basic Shape : some most common shapes.
@@ -66,6 +66,7 @@ supports multiple shapes for ImageView,and some most common filter. CLICK THE **
             app:mirrorBorderColor="#bfbfbf"
             app:mirrorCorner="10dp"/>
 ```
+
 * Mask Sharp (the res of mirrorAnySharp must be put in res/drawable)
 ```xml
 <com.kingja.magicmirror.MagicMirrorView
@@ -83,6 +84,8 @@ supports multiple shapes for ImageView,and some most common filter. CLICK THE **
             android:src="@mipmap/taylor"
             app:mirrorFilter="oldPicture"/>
 ```
+* Custom Shape
+You alos can customize your shape by extending the Mirror and overriding the method `getMirrorPath()`.
 ## Changelog
 
 **v1.1.1**

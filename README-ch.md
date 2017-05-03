@@ -1,6 +1,6 @@
 # MagicMirror 
 
-[English](README.md)
+中文 | [English](README.md)
 
 提供多种常用形状，基于蒙版图的任意形状及常用滤镜的自定义ImageView。如果对您有用，请点STAR。
 
@@ -82,6 +82,9 @@
             android:src="@mipmap/taylor"
             app:mirrorFilter="oldPicture"/>
 ```
+* 自定义形状
+你可以通过继承 Mirror类复写getMirrorPath()方法来定制自己的形状。
+
 ## Changelog
 
 **v1.1.1**

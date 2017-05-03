@@ -38,5 +38,4 @@ public class PolygonMirror extends Mirror {
         return path;
     }
 
-
 }

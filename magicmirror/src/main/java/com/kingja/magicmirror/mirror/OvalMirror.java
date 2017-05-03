@@ -9,6 +9,7 @@ import android.graphics.Path;
  * Email:kingjavip@gmail.com
  */
 public class OvalMirror extends Mirror {
+
     @Override
     public int getMeasuredMirrorWidth() {
         setWidth(getMagicMirror().getMeasuredWidth());
@@ -27,5 +28,4 @@ public class OvalMirror extends Mirror {
         path.addOval(getRectF(), Path.Direction.CW);
         return path;
     }
-
 }
