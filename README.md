@@ -91,9 +91,10 @@ You alos can customize your shape by extending the Mirror and overriding the met
 ## Changelog
 
 **v1.2.0**
-- add filter
+* add filter
+
 **v1.1.1**
-- Initial release 
+* Initial release
 
 ## TODO
 

@@ -89,9 +89,10 @@
 ## Changelog
 
 **v1.2.0**
-- add filter
+* add filter
+
 **v1.1.1**
-- Initial release
+* Initial release
 
 ## Contact me
 Any questions,Welcome to contact me.
