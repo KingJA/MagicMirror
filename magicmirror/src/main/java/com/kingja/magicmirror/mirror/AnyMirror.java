@@ -18,10 +18,10 @@ public class AnyMirror extends Mirror {
 
     @Override
     public Path getMirrorPath() {
-        if (sharpResourceId == 0) {
+        if (getMaskRes() == 0) {
             throw new IllegalArgumentException("attr 'mirrorAnySharp' can't be empty");
         }
-        Bitmap bitmap = getBitmapFromRes(magicMirrorView.getResources(), sharpResourceId, getWidth(), getHeight());
+        Bitmap bitmap = getBitmapFromRes(getMagicMirror().getResources(), getMaskRes(), getWidth(), getHeight());
         Path path = getPixelsPath(bitmap);
         bitmap.recycle();
         float scaleX = getWidth() * 1.0f / bitmap.getWidth();
@@ -70,7 +70,6 @@ public class AnyMirror extends Mirror {
         options.inJustDecodeBounds = false;
         return BitmapFactory.decodeResource(resources, resId, options);
     }
-
 
 
 }

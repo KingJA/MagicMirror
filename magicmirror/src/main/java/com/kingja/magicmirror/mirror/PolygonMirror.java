@@ -13,9 +13,6 @@ public class PolygonMirror extends Mirror {
 
     @Override
     public Path getMirrorPath() {
-        if (getSides() < 3) {
-            throw new IllegalArgumentException("sides can't be smaller than 3");
-        }
         Path path = new Path();
         float radius, centerX, centerY;
         radius = centerX = centerY = Math.min(getWidth(), getHeight()) * 0.5f;

@@ -23,15 +23,15 @@ import com.kingja.magicmirror.filter.FilterHelper;
  * Email:kingjavip@gmail.com
  */
 public abstract class Mirror {
-    protected int corner;
-    protected int borderWidth;
-    protected int borderColor;
-    protected int width;
-    protected int height;
-    protected int sides;
-    protected int filter;
-    protected int sharpResourceId;
-    protected MagicMirrorView magicMirrorView;
+    private int corner;
+    private int borderWidth;
+    private int borderColor;
+    private int width;
+    private int height;
+    private int sides;
+    private int filter;
+    private int maskRes;
+    private MagicMirrorView magicMirrorView;
 
 
     public Mirror setContext(@NonNull MagicMirrorView magicMirrorView) {
@@ -39,9 +39,17 @@ public abstract class Mirror {
         return this;
     }
 
-    public Mirror setShapeResourceId(@IdRes int sharpResourceId) {
-        this.sharpResourceId = sharpResourceId;
+    protected MagicMirrorView getMagicMirror() {
+        return magicMirrorView;
+    }
+
+    public Mirror setMaskRes(@IdRes int sharpResourceId) {
+        this.maskRes = sharpResourceId;
         return this;
+    }
+
+    protected int getMaskRes() {
+        return maskRes;
     }
 
     public Mirror setFilter(int filter) {
@@ -54,7 +62,7 @@ public abstract class Mirror {
         return this;
     }
 
-    public int getCorner() {
+    protected int getCorner() {
         return corner;
     }
 
@@ -63,7 +71,7 @@ public abstract class Mirror {
         return this;
     }
 
-    public int getBorderWidth() {
+    protected int getBorderWidth() {
         return borderWidth;
     }
 
@@ -72,7 +80,10 @@ public abstract class Mirror {
         return this;
     }
 
-    public int getSides() {
+    protected int getSides() {
+        if (sides < 3) {
+            throw new IllegalArgumentException("sides can't be smaller than 3");
+        }
         return sides;
     }
 
@@ -81,7 +92,7 @@ public abstract class Mirror {
         return this;
     }
 
-    public int getWidth() {
+    protected int getWidth() {
         return width;
     }
 
@@ -89,7 +100,7 @@ public abstract class Mirror {
         return height;
     }
 
-    public void setWidth(int width) {
+    protected void setWidth(int width) {
         this.width = width;
     }
 
@@ -97,7 +108,7 @@ public abstract class Mirror {
         this.height = height;
     }
 
-    public final Paint getStrokePaint() {
+    protected final Paint getStrokePaint() {
         Paint strokePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         strokePaint.setStyle(Paint.Style.STROKE);
         strokePaint.setColor(borderColor);
@@ -106,14 +117,14 @@ public abstract class Mirror {
     }
 
 
-    public final RectF getRectF() {
+    protected final RectF getRectF() {
         int borderOffset = (int) (borderWidth * 0.5f);
         RectF rectF = new RectF();
         rectF.set(borderOffset, borderOffset, width - borderOffset, height - borderOffset);
         return rectF;
     }
 
-    public final Paint getShaderPaint() {
+    protected final Paint getShaderPaint() {
         Bitmap mBitmap = drawableToBitmap(magicMirrorView.getDrawable());
         mBitmap = FilterHelper.getFilterBitmap(mBitmap, filter);
         BitmapShader mBitmapShader = new BitmapShader(mBitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
@@ -168,6 +179,5 @@ public abstract class Mirror {
     }
 
     public abstract Path getMirrorPath();
-
 
 }

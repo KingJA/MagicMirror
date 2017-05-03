@@ -18,20 +18,7 @@ import com.kingja.magicmirror.mirror.Mirror;
 public class MagicMirrorView extends AppCompatImageView {
 
     private static final int DEFAULT_SIDES = 5;
-    private int corner;
-    private int borderWidth;
-    private int borderColor;
-    private int sides;
-    private int filter;
-    private int shapeResourceId;
     private Mirror mirror;
-
-    public interface Filter {
-        int OLDPICTURE = 1;
-        int GRAY = 2;
-        int SATURATION = 3;
-    }
-
 
     public MagicMirrorView(Context context) {
         this(context, null);
@@ -45,15 +32,16 @@ public class MagicMirrorView extends AppCompatImageView {
         super(context, attrs, defStyleAttr);
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.MagicMirrorView);
         int sharpCode = typedArray.getInteger(R.styleable.MagicMirrorView_mirrorShape, 0);
-        corner = Util.dp2px(context, typedArray.getDimension(R.styleable.MagicMirrorView_mirrorCorner, 0));
-        borderWidth = Util.dp2px(context, typedArray.getDimension(R.styleable.MagicMirrorView_mirrorBorderWidth, 0));
-        borderColor = typedArray.getColor(R.styleable.MagicMirrorView_mirrorBorderColor, Color.TRANSPARENT);
-        shapeResourceId = typedArray.getResourceId(R.styleable.MagicMirrorView_mirrorAnyShape, 0);
-        filter = typedArray.getInteger(R.styleable.MagicMirrorView_mirrorFilter, 0);
-        sides = typedArray.getInteger(R.styleable.MagicMirrorView_mirrorSides, DEFAULT_SIDES);
+        int corner = Util.dp2px(context, typedArray.getDimension(R.styleable.MagicMirrorView_mirrorCorner, 0));
+        int borderWidth = Util.dp2px(context, typedArray.getDimension(R.styleable.MagicMirrorView_mirrorBorderWidth,
+                0));
+        int borderColor = typedArray.getColor(R.styleable.MagicMirrorView_mirrorBorderColor, Color.TRANSPARENT);
+        int maskRes = typedArray.getResourceId(R.styleable.MagicMirrorView_mirrorMaskRes, 0);
+        int filter = typedArray.getInteger(R.styleable.MagicMirrorView_mirrorFilter, 0);
+        int sides = typedArray.getInteger(R.styleable.MagicMirrorView_mirrorSides, DEFAULT_SIDES);
         mirror = MirrorFactory.createMirror(sharpCode)
                 .setContext(this)
-                .setShapeResourceId(shapeResourceId)
+                .setMaskRes(maskRes)
                 .setFilter(filter)
                 .setCorner(corner)
                 .setBorderWidth(borderWidth)
@@ -73,7 +61,6 @@ public class MagicMirrorView extends AppCompatImageView {
     protected void onDraw(Canvas canvas) {
         mirror.drawMirror(canvas);
     }
-
 
     public void setCorner(int conrner) {
         mirror.setCorner(conrner);
@@ -100,8 +87,8 @@ public class MagicMirrorView extends AppCompatImageView {
         invalidate();
     }
 
-    public void setShapeResourceId(int shapeResourceId) {
-        mirror.setShapeResourceId(shapeResourceId);
+    public void setMaskRes(int maskRes) {
+        mirror.setMaskRes(maskRes);
         invalidate();
     }
 

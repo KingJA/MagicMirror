@@ -19,6 +19,6 @@
         <attr name="mirrorCorner" format="dimension" />
         <attr name="mirrorBorderWidth" format="dimension" />
         <attr name="mirrorBorderColor" format="reference|color" />
-        <attr name="mirrorAnyShape" format="reference" />
+        <attr name="mirrorMaskRes" format="reference" />
     </declare-styleable>
 </resources>

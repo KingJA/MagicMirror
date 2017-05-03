@@ -11,14 +11,14 @@ import android.graphics.Path;
 public class OvalMirror extends Mirror {
     @Override
     public int getMeasuredMirrorWidth() {
-        setWidth(magicMirrorView.getMeasuredWidth());
-        return magicMirrorView.getMeasuredWidth();
+        setWidth(getMagicMirror().getMeasuredWidth());
+        return getMagicMirror().getMeasuredWidth();
     }
 
     @Override
     public int getMeasuredMirrorHeight() {
-        setHeight(magicMirrorView.getMeasuredHeight());
-        return magicMirrorView.getMeasuredHeight();
+        setHeight(getMagicMirror().getMeasuredHeight());
+        return getMagicMirror().getMeasuredHeight();
     }
 
     @Override
