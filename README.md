@@ -98,11 +98,8 @@ You also can customize your shape by extending the Mirror and overriding the met
 
 
 ## Contact me
-Any questions,Welcome to contact me.
-* email:kingjavip@gmail.com
-* QQ:87049319
-* Weixin:darabbbit
-* [My blog](https://kingja.github.io)
+Any questions:Welcome to contact me.
+* Email:kingjavip@gmail.com
 
 ## License
 
